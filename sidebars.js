@@ -1,9 +1,9 @@
 module.exports = {
-  someSidebar: {
-    Docusaurus: ['sample/doc1', 'sample/doc2', 'sample/doc3'],
-    Features: ['sample/mdx'],
+  web: {
+    Javascript: ['web/js/basic', 'web/js/array', 'web/js/object'],
+    CSS: ['web/css/basic']
   },
-  xSidebar: {
-    x1: ['x/x1'],
+  tools: {
+    shell: ['tools/shell/shell-script', 'tools/shell/tmux', 'tools/shell/git'],
 },
 };

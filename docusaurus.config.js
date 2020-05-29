@@ -1,7 +1,8 @@
 module.exports = {
-    title: 'Theo\'s Personal Site',
+    title: "Theo's Documentation Site",
     tagline: 'Hello From Theo',
-    favicon: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
+    favicon:
+        '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
 
     organizationName: 'wolffn',
     projectName: 'wolffn.github.io',
@@ -15,24 +16,26 @@ module.exports = {
             title: 'Theo',
             logo: {
                 alt: 'My Site Logo',
-                src: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
+                src:
+                    '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
             },
             links: [
-                { to: 'blog', label: 'Blog', position: 'left' },
+
                 {
-                    to: 'docs/sample/doc1',
-                    activeBasePath: 'docs/sample',
-                    label: 'Docs',
+                    to: 'docs/web/js/basic',
+                    activeBasePath: 'docs/web',
+                    label: 'Wed Development',
                     position: 'left',
                 },
                 {
-                    to: 'docs/x/x1',
-                    activeBasePath: 'docs/x',
-                    label: 'X',
+                    to: 'docs/tools/shell/shell-script',
+                    activeBasePath: 'docs/tools',
+                    label: 'Tools',
                     position: 'left',
                 },
+                { to: 'blog', label: 'Articles', position: 'left' },
                 {
-                    href: 'https://github.com/facebook/docusaurus',
+                    href: 'https://github.com/wolffn',
                     label: 'GitHub',
                     position: 'right',
                 },
@@ -51,12 +54,8 @@ module.exports = {
                     title: 'Docs',
                     items: [
                         {
-                            label: 'Style Guide',
-                            to: 'docs/sample/doc1',
-                        },
-                        {
-                            label: 'Second Doc',
-                            to: 'docs/sample/doc2/',
+                            label: 'JS Basic',
+                            to: 'docs/web/js/basic',
                         },
                     ],
                 },
@@ -64,16 +63,8 @@ module.exports = {
                     title: 'Community',
                     items: [
                         {
-                            label: 'Stack Overflow',
-                            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                        },
-                        {
-                            label: 'Discord',
-                            href: 'https://discordapp.com/invite/docusaurus',
-                        },
-                        {
                             label: 'Twitter',
-                            href: 'https://twitter.com/docusaurus',
+                            href: 'https://twitter.com/wolfFNs',
                         },
                     ],
                 },
@@ -82,11 +73,11 @@ module.exports = {
                     items: [
                         {
                             label: 'Blog',
-                            to: 'blog',
+                            to: 'https://wolffn.github.io/blog/',
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/facebook/docusaurus',
+                            href: 'https://github.com/wolffn',
                         },
                     ],
                 },
@@ -100,15 +91,16 @@ module.exports = {
             {
                 docs: {
                     // It is recommended to set document id as docs home page (`docs/` path).
-                    homePageId: 'docs/',
+                    homePageId: 'docs/web/js/basic',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
-                    editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+                    // editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+                    editUrl:
+                        'https://github.com/facebook/docusaurus/edit/master/website/blog/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
