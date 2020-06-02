@@ -1,26 +1,23 @@
 module.exports = {
     title: "Theo's Documentation Site",
     tagline: 'Hello From Theo',
-    favicon:
-        '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
+    favicon: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
 
     organizationName: 'wolffn',
     projectName: 'wolffn.github.io',
     url: 'https://wolffn.github.io',
     baseUrl: '/',
 
-    // themes: ['@docusaurus/theme-classic', '@docusaurus/theme-search-algolia'],
-    themes: ['@docusaurus/theme-classic'],
+    themes: ['@docusaurus/theme-classic', '@docusaurus/theme-search-algolia'],
+    // themes: ['@docusaurus/theme-classic'],
     themeConfig: {
         navbar: {
             title: 'Theo',
             logo: {
                 alt: 'My Site Logo',
-                src:
-                    '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
+                src: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
             },
             links: [
-
                 {
                     to: 'docs/web/js/basic',
                     activeBasePath: 'docs/web',
@@ -40,13 +37,14 @@ module.exports = {
                     position: 'right',
                 },
             ],
-            // algolia: {
-            //     apiKey: 'api-key',
-            //     indexName: 'index-name',
-            //     appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
-            //     algoliaOptions: {}, // Optional, if provided by Algolia
-            // },
+
         },
+        algolia: {
+            apiKey: '54d389cbe47f4a8e71e5888ae0091264',
+            indexName: 'wolffn',
+            // appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
+            algoliaOptions: {}, // Optional, if provided by Algolia
+          },
         footer: {
             style: 'dark',
             links: [
@@ -99,8 +97,7 @@ module.exports = {
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+                    editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),

@@ -7,6 +7,7 @@ title: Tmux
 
 1. 远程服务器上持久地保存工作状态。比如，我在本地或服务器做某项工作，需要在`Terminal`打开几个窗口。每次换工作，还需要切换。用`Tmux`，便可以按照`Session`进行管理，每次轻松打开切换。
 2. 随时随地断开或连接`Session`。比如，在服务器上面运行一条命令，但是担心连接断开后命令终止，此时在tmux中运行命令，此时断网关机便问题不大，只需随后恢复`Session便可以`。
+
 ## Install
 
 服务器上需要根据具体操作系统安装，包管理一般支持。若不支持，请参考[GitHub - tmux/tmux: tmux source code](https://github.com/tmux/tmux)。<br />Mac上只需如下命令：
@@ -42,7 +43,7 @@ set-window-option -g mode-keys vi
 - 一图以蔽之：
 
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/262447/1551844758668-bb028dd3-1746-43af-89c2-7e3c491a339e.png#align=left&display=inline&height=326&name=image.png&originHeight=326&originWidth=690&size=245289&status=done&width=690)
+![Conception](/img/docs/Tmux/conception.jpg)
 
 ## Session
 

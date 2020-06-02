@@ -1,5 +1,5 @@
 ---
-title Object
+title: Object
 ---
 # 继承 inherit
 
