@@ -43,7 +43,7 @@ set-window-option -g mode-keys vi
 - 一图以蔽之：
 
 
-![Conception](/img/docs/Tmux/conception.jpg)
+![Conception](/img/docs/tmux/conception.jpg)
 
 ## Session
 
