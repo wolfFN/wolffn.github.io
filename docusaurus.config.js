@@ -30,6 +30,12 @@ module.exports = {
                     label: 'Tools',
                     position: 'left',
                 },
+                {
+                    to: 'docs/snippets/js/conditional',
+                    activeBasePath: 'docs/snippets',
+                    label: 'Snippets',
+                    position: 'left',
+                },
                 { to: 'blog', label: 'Articles', position: 'left' },
                 {
                     href: 'https://github.com/wolffn',
