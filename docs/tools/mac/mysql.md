@@ -1,10 +1,8 @@
 ---
-title: Mac配置MySQL以及Squel Pro
-tags: [mac, mysql, tools]
+title: MySQL
 ---
 > 为了响应`nodejs`的大红大紫，最近应用其实现了一些server端的功能。数据库方面选择了老少咸宜的`MySQL`。今后肯定还会有相关应用需求。特此记录`Mac`系统下如何安装、配置`MySQL`及其管理工具`Squel Pro`。
 
-<!--truncate-->
 
 ### Why MySQL
 数据库有很多，为什么么我选择了`MySQL`呢。
@@ -111,7 +109,7 @@ tags: [mac, mysql, tools]
 ### Sequel Pro
 
 
-![Sequel Pro.png](/img/blog/mac-mysql/sequel-pro.png)
+![Sequel Pro.png](/img/docs/mac-mysql/sequel-pro.png)
 
 登陆后软件界面如上图所示。可以简单看到如下功能：
 1. 左上角数据库选择，可以管理数据库
@@ -124,9 +122,9 @@ tags: [mac, mysql, tools]
 [官网](http://www.sequelpro.com/)下载安装包后运行即可。
 ##### 登录
 界面如下，输入`Host`,`Username`,`Password`即可登录。此处建议使用新建的nodejs用户登录管理`nodejs`数据库。除建立新用户、给新用户授予权限外，为安全原因，不建议使用`root`用户。
-![login.png](/img/blog/mac-mysql/login.png)
+![login.png](/img/docs/mac-mysql/login.png)
 
 ##### 使用
 登陆后点击右上角，可以看到选择数据库，新建数据库等等信息，就可以开始查看、管理数据库了。由于工具本身图形界面做的重点突出使用方便，此处不再赘述。
 
-![choose database.png](/img/blog/mac-mysql/choose-database.png)
+![choose database.png](/img/docs/mac-mysql/choose-database.png)

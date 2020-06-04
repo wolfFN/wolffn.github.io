@@ -37,7 +37,7 @@ module.exports = {
     },
     snippets: {
         Javascript: ['snippets/js/conditional', 'snippets/js/functions'],
-        CSS: ['snippets/css/animation'],
+        CSS: ['snippets/css/animation', 'snippets/css/tricks'],
     },
     tools: {
         Shell: [
@@ -48,7 +48,7 @@ module.exports = {
             'tools/shell/awk',
             'tools/shell/npm',
         ],
-        Mac: ['tools/mac/mac-dev', 'tools/mac/alfred'],
+        Mac: ['tools/mac/mac-dev', 'tools/mac/alfred', 'tools/mac/mysql'],
         Ubuntu: ['tools/ubuntu/ubuntu'],
         Tools: [
             'tools/tools/vscode',

@@ -2,7 +2,14 @@
 title: 实用函数
 ---
 
+## `node.js`程序在 chrome 中调试
+
+    ```bash
+    node --inspect app.js
+    ```
+
 ## 创建数组
+
 ```javascript
 Array.from({ length: 100 }, (v, i) => i);
 // [0, 1, 2, .......99]
@@ -35,7 +42,6 @@ async function asyncAwaitLoopsParallel() {
 }
 ```
 
-
 ## sleep
 
 ```javascript
@@ -58,7 +64,6 @@ return delay(10000).then(function () {
 test();
 ```
 
-
 ## 防抖
 
 多次触发同一个动作、事件时，仅**最后一次**触发
@@ -75,7 +80,6 @@ function debounce(method, time) {
     };
 }
 ```
-
 
 ## 节流
 

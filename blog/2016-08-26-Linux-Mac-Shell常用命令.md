@@ -7,6 +7,8 @@ tags: [shell, linux, mac, tools]
 
 > 本文主要记录一些Shell命令的基本用法，作为参考/查询手册，随时更新、完善。更多技巧以及详细解释将后续以专题形式持续更新。
 
+<!--truncate-->
+
 ## 命令行操作技巧
 ### 光标移动
 > 注意：Mac系统下Terminal以及Iterm下，使用Alt相关功能，需要单独设置。  
@@ -16,7 +18,7 @@ tags: [shell, linux, mac, tools]
 1. `alt + f`    向后移动一个单词
 1. `alt + b`    向前移动一个单词
 
-<!--truncate-->
+
 
 ### 编辑
 1. `ctrl + k`   删除至行尾

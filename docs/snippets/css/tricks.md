@@ -1,9 +1,9 @@
 ---
-title: CSS TRICKS
-tags: [css]
+title: TRICKS
 ---
 
-##  文字折线
+## 文字折线
+
 ```css
 /*
  * 省略文字...
@@ -28,29 +28,28 @@ tags: [css]
 }
 ```
 
-<!--truncate-->
-
 ## 聊天边框小三角
+
 ```css
 body {
-	margin: 0;
+    margin: 0;
 }
 .container {
-	position: relative;
-	width: 200px;
-	height: 50px;
-	margin-top: 10px;
-	background-color: red;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: red;
 }
 .container:before {
-	content: "";
-	display: inline-block;
-	position: absolute;
-	width: 0;
-	height: 0;
-	border: 10px solid transparent;
-	border-bottom-color: red;
-	top: -20px;
-	left: 20px;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: red;
+    top: -20px;
+    left: 20px;
 }
 ```
