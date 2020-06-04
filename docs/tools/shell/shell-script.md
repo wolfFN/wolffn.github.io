@@ -1,5 +1,5 @@
 ---
-title: Shell 脚本
+title: Shell Script
 ---
 
 #### 变量，字符串

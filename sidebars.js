@@ -35,15 +35,34 @@ module.exports = {
             'web/library/sequelize',
         ],
     },
-    tools: {
-        shell: [
-            'tools/shell/shell-script',
-            'tools/shell/tmux',
-            'tools/shell/git',
-        ],
-    },
     snippets: {
         Javascript: ['snippets/js/conditional', 'snippets/js/functions'],
         CSS: ['snippets/css/animation'],
+    },
+    tools: {
+        Shell: [
+            'tools/shell/shell-script',
+            'tools/shell/tmux',
+            'tools/shell/git',
+            'tools/shell/grep',
+            'tools/shell/awk',
+            'tools/shell/npm',
+        ],
+        Mac: ['tools/mac/mac-dev', 'tools/mac/alfred'],
+        Ubuntu: ['tools/ubuntu/ubuntu'],
+        Tools: [
+            'tools/tools/vscode',
+            'tools/tools/webstorm',
+            'tools/tools/chrome',
+        ],
+        MySQL: [
+            'tools/mysql/operation',
+            'tools/mysql/dump',
+        ],
+        软技能: [
+            'tools/soft/delay',
+            'tools/soft/team-work',
+            'tools/soft/subjective',
+        ]
     },
 };
