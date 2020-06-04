@@ -1,7 +1,8 @@
 module.exports = {
     title: "Theo's Documentation Site",
     tagline: 'Hello From Theo',
-    favicon: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
+    favicon:
+        '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
 
     organizationName: 'wolffn',
     projectName: 'wolffn.github.io',
@@ -15,7 +16,8 @@ module.exports = {
             title: 'Theo',
             logo: {
                 alt: 'My Site Logo',
-                src: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
+                src:
+                    '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
             },
             links: [
                 {
@@ -25,17 +27,24 @@ module.exports = {
                     position: 'left',
                 },
                 {
-                    to: 'docs/tools/shell/shell-script',
-                    activeBasePath: 'docs/tools',
-                    label: 'Tools',
-                    position: 'left',
-                },
-                {
                     to: 'docs/snippets/js/conditional',
                     activeBasePath: 'docs/snippets',
                     label: 'Snippets',
                     position: 'left',
                 },
+                {
+                    to: 'docs/algorithm/tree/traverse',
+                    activeBasePath: 'docs/algorithm',
+                    label: 'Algorithm',
+                    position: 'left',
+                },
+                {
+                    to: 'docs/tools/shell/shell-script',
+                    activeBasePath: 'docs/tools',
+                    label: 'Tools',
+                    position: 'left',
+                },
+
                 { to: 'blog', label: 'Articles', position: 'left' },
                 {
                     href: 'https://github.com/wolffn',
@@ -43,14 +52,18 @@ module.exports = {
                     position: 'right',
                 },
             ],
-
         },
         algolia: {
             apiKey: '54d389cbe47f4a8e71e5888ae0091264',
             indexName: 'wolffn',
             // appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
             algoliaOptions: {}, // Optional, if provided by Algolia
-          },
+        },
+        prism: {
+            // https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes
+            theme: require('prism-react-renderer/themes/github'),
+            // theme: require('prism-react-renderer/themes/dracula'),
+        },
         footer: {
             style: 'dark',
             links: [
@@ -103,7 +116,8 @@ module.exports = {
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
-                    editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+                    editUrl:
+                        'https://github.com/facebook/docusaurus/edit/master/website/blog/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),

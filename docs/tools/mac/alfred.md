@@ -50,7 +50,7 @@ Open Bookmarks in bookmark’s source browser
 
 Application: Custom
 
-```
+``` applescript
 on alfred_script(q)
 	if application "iTerm2" is running or application "iTerm" is running then
 		run script "

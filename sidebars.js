@@ -65,4 +65,19 @@ module.exports = {
             'tools/soft/subjective',
         ]
     },
+    algorithm: {
+        树: [
+            'algorithm/tree/traverse'
+        ],
+        图: [
+            'algorithm/graphs/bellman-ford',
+            'algorithm/graphs/dijkstra',
+        ],
+        应用: [
+            'algorithm/application/double-pointer',
+            'algorithm/application/fibonacci',
+            'algorithm/application/dutch-flag',
+            'algorithm/application/leetcode-hot-300',
+        ]
+    }
 };
