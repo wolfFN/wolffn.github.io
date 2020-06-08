@@ -48,36 +48,35 @@ module.exports = {
             'tools/shell/awk',
             'tools/shell/npm',
         ],
-        Mac: ['tools/mac/mac-dev', 'tools/mac/alfred', 'tools/mac/mysql'],
+        Mac: [
+            'tools/mac/system',
+            'tools/mac/terminal',
+            'tools/mac/software',
+            'tools/mac/mac-dev',
+            'tools/mac/alfred',
+            'tools/mac/mysql',
+        ],
         Ubuntu: ['tools/ubuntu/ubuntu'],
         Tools: [
             'tools/tools/vscode',
             'tools/tools/webstorm',
             'tools/tools/chrome',
         ],
-        MySQL: [
-            'tools/mysql/operation',
-            'tools/mysql/dump',
-        ],
+        MySQL: ['tools/mysql/operation', 'tools/mysql/dump'],
         软技能: [
             'tools/soft/delay',
             'tools/soft/team-work',
             'tools/soft/subjective',
-        ]
+        ],
     },
     algorithm: {
-        树: [
-            'algorithm/tree/traverse'
-        ],
-        图: [
-            'algorithm/graphs/bellman-ford',
-            'algorithm/graphs/dijkstra',
-        ],
+        树: ['algorithm/tree/traverse'],
+        图: ['algorithm/graphs/bellman-ford', 'algorithm/graphs/dijkstra'],
         应用: [
             'algorithm/application/double-pointer',
             'algorithm/application/fibonacci',
             'algorithm/application/dutch-flag',
             'algorithm/application/leetcode-hot-300',
-        ]
-    }
+        ],
+    },
 };

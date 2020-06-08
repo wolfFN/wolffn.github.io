@@ -2,6 +2,8 @@
 title: Webstorm
 ---
 
+[WebStorm](http://www.jetbrains.com/webstorm/) : FE们最爱的IDE, 推荐grey_orange主题
+
 ### 常用快捷键
 
 `F8` Next Error / Warning  

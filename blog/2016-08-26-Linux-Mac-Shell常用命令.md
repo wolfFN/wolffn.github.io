@@ -17,7 +17,7 @@ tags: [shell, linux, mac, tools]
 1. `ctrl + e`   移动至行尾
 1. `alt + f`    向后移动一个单词
 1. `alt + b`    向前移动一个单词
-
+1. `alt + 左键`  直接移动到点击位置
 
 
 ### 编辑
@@ -101,47 +101,7 @@ tags: [shell, linux, mac, tools]
   1. `sed`管道命令，以行为单位进行处理
   2. `awk`管道命令，以列为单位进行处理
 5.  `|` 管道
-6.  `> >>` 重定向
-
-### grep
-
-#### grep 命令语法
-
-```bash
-grep 'word' 文件名
-grep 'word' 文件1 文件2 文件3
-grep '字符串1 字符串2' 文件名
-cat 某个文件 | grep '某个东西'
-command  | grep '某个东西'
-command 选项1 | grep '数据'
-grep --color '数据' 文件名
-```
-#### grep在文件夹中查找包含内容的文件
-
-```bash
-grep 'filename' dir
-```
-在目录下查找含有 `filename` 的文件
-
-`-i` 强制忽略大小写
-`-r` 递归
-`-H` 输出文件名
-`-h` 禁止输出文件名
-
-#### grep在文件中查找内容
-
-```bash
-grep 'text' file
-```
-在`file`中查找 `text`
-`-w` 强制输出仅仅包含整个单词的行
-`-c` 统计匹配到的次数
-`-n` 显示行号
-`-v` 输出不包含匹配的项
-`word1|word2` 搜索两个不同的单词，（`egrep`支持正则的省略语法)
-`--color` 强制以彩色输出
-`-l` 显示包含text的文件名(此时`file`是多个文件，例如`*.html`，`/path/*`)
-`-L` 显示不包含text的文件名
+6.  `> >>` 重定向。其中，`>` 为覆盖，`>>` 为追加。
 
 ## 包管理(ubuntu)
 
@@ -166,50 +126,7 @@ sudo apt-get clean && sudo apt-get autoclean 清理无用的包
 
 
 
-
-
-
-## shell脚本
-#### 变量，字符串
-```bash
-# 声明变量, 注意不要留空格
-x=12
-y=hello
-# 字符串拼接
-echo $y" world!"
-# 输出所有环境变量
-set
-```
-#### 参数
-通过`$1, $2...${10}...`的形式来使用参数
-```bash
-# 输出当前脚本的参数个数
-echo "$#"
-```
-#### 返回值
-程序返回值范围:`0-255`, 默认为`0`. 常见`error code`:
-`1` general error
-`2` 错误使用命令,比如,传入不恰当的参数
-`127` command not found
-```bash
-# 退出,并返回
-# 输出最近一条命令的返回值
-echo $?
-```
-#### 函数
-```bash
-# 声明
-myfunc() {
-	echo  "in myfunc: ";
-	echo  "first: "$1", second: "$2;
-}
-# 调用(无需括号)
-myfunc;
-# 调用，含参数
-myfunc hello world;
-```
-- 使用参数方式与文件相同。区别在于函数通过`return`返回，而文件使用`exit`返回。
-- 是对`.zshrc`的有力补充，因为可以接受参数。
-
-
-
+## 进阶
+### [Grep](http://wolffn.github.io/docs/tools/shell/grep)  
+### [AWK](http://wolffn.github.io/docs/tools/shell/awk)  
+### [Shell Script](http://wolffn.github.io/docs/tools/shell/shell-script)  
