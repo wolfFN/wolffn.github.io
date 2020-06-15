@@ -76,7 +76,7 @@ class QuickFind {
     }
 
     connected(p, q) {
-        return this.find[p] === this.find[q];
+        return this.find(p) === this.find(q);
     }
 
     union(p, q) {
@@ -131,7 +131,7 @@ class QuickUnion {
     }
 
     connected(p, q) {
-        return this.find[p] === this.find[q];
+        return this.find(p) === this.find(q);
     }
 
     union(p, q) {
@@ -178,7 +178,7 @@ class WeightedQuickUnion {
     }
 
     connected(p, q) {
-        return this.find[p] === this.find[q];
+        return this.find(p) === this.find(q);
     }
 
     union(p, q) {
