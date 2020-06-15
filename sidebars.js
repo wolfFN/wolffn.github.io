@@ -71,7 +71,11 @@ module.exports = {
     },
     algorithm: {
         树: ['algorithm/tree/traverse'],
-        图: ['algorithm/graphs/bellman-ford', 'algorithm/graphs/dijkstra'],
+        图: [
+            'algorithm/graphs/union-find',
+            'algorithm/graphs/bellman-ford',
+            'algorithm/graphs/dijkstra',
+        ],
         应用: [
             'algorithm/application/double-pointer',
             'algorithm/application/fibonacci',
