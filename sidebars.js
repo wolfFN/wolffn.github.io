@@ -70,6 +70,7 @@ module.exports = {
         ],
     },
     algorithm: {
+        字符串: ['algorithm/string/substring_search'],
         树: ['algorithm/tree/traverse'],
         图: [
             'algorithm/graphs/union-find',
