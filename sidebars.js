@@ -78,6 +78,7 @@ module.exports = {
             'algorithm/graphs/dijkstra',
         ],
         应用: [
+            'algorithm/application/binary-search',
             'algorithm/application/double-pointer',
             'algorithm/application/fibonacci',
             'algorithm/application/dutch-flag',
