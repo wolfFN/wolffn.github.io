@@ -23,7 +23,6 @@ Create React App 创建的工程，一段时间后，打包速度越来越慢。
 
 综上，方案 2 应该是最佳选择。考虑到优化带来的效果不明，以及 2 的前期额外投入，我们暂时先采取方案 3，待效果明显或遇到瓶颈后，切换方案 2 。
 
-
 ## rewired
 
 安装依赖
@@ -178,7 +177,7 @@ module.exports = override(useHappyPack);
 <script src="//cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <script src="//cdn.bootcdn.net/ajax/libs/moment.js/2.27.0/locale/zh-cn.min.js"></script>
 
-<script src="//cdn.bootcdn.net/ajax/libs/antd/4.3.4/antd.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/antd/4.3.4/antd-with-locales.min.js"></script>
 ```
 
 最后，override config
@@ -201,6 +200,20 @@ const useExternal = config => {
 module.exports = override(useExternal);
 ```
 
+`antd` 里面国际化相关的代码，还要做一点改动
+
+```javascript
+// import zhCN from 'antd/es/locale/zh_CN';
+import { locales } from 'antd';
+
+ReactDOM.render(
+    <ConfigProvider locale={locales.zh_CN}>
+        <App />
+    </ConfigProvider>,
+    document.getElementById('root'),
+);
+```
+
 经过这些操作后，打包时间大幅减少，bundle analyzer 中依赖所占比例也降低了很多。
 
 该过程中，我发现了社区有一个 package，可以通过配置的方式增加 external。这样写法更优雅一些，同时打包时间还减少了。。。我实在是不知道为什么。
@@ -215,7 +228,8 @@ const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const externals = [
     {
         module: 'antd',
-        entry: '//cdn.bootcdn.net/ajax/libs/antd/4.3.4/antd.min.js',
+        entry:
+            '//cdn.bootcdn.net/ajax/libs/antd/4.3.4/antd-with-locales.min.js',
         global: 'antd',
     },
     {
