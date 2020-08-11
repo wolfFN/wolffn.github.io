@@ -1,37 +1,6 @@
 ---
-title: 动画
+title: JS 动画
 ---
-## Loading
-
-居中的 loading 动画，本质是将 12 张独立的图片，拼到一起，步进动画，共 12 步。  
-(下面有一张图，loading.png，右键 -> `Open Image In New Tab` 进行查看)  
-![loading.png](/img/docs/animation/loading.png)
-
-```css
-.loader {
-    position: absolute;
-    z-index: 10002;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    .loader-img {
-        width: 40px;
-        height: 40px;
-        background: url(/img/loading.png) 0 0 no-repeat;
-        animation: loader 1s infinite steps(12);
-        overflow: hidden;
-    }
-}
-
-@keyframes loader {
-    to {
-        background-position: -480px 0;
-    }
-}
-```
 
 ## JS 动画
 

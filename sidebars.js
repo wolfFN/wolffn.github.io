@@ -17,7 +17,12 @@ module.exports = {
             'web/js/regex',
             'web/js/module',
         ],
-        CSS: ['web/css/basic', 'web/css/blank', 'web/css/margin'],
+        CSS: [
+            'web/css/basic',
+            'web/css/blank',
+            'web/css/margin',
+            'web/css/animation',
+        ],
 
         React: [
             'web/react/basic',
@@ -36,8 +41,12 @@ module.exports = {
         ],
     },
     snippets: {
-        Javascript: ['snippets/js/conditional', 'snippets/js/functions'],
-        CSS: ['snippets/css/animation', 'snippets/css/tricks'],
+        Javascript: [
+            'snippets/js/conditional',
+            'snippets/js/functions',
+            'snippets/js/animation',
+        ],
+        CSS: ['snippets/css/tricks'],
     },
     tools: {
         Shell: [
