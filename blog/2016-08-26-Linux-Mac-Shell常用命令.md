@@ -80,7 +80,7 @@ tags: [shell, linux, mac, tools]
 4.  `top` 动态显示当前耗费资源最多进程信息
 5.  `ps` 显示瞬间进程状态 `ps aux`
 6.  `kill` 杀死进程（top/ps查看进程id后，`kill [id]`）
-7.  `netstat`显示网络状态信息
+7.  `netstat`显示网络状态信息，`lsof -i :3000` 查看占用 3000 端口的进程
 8.  `which [command]` 查看命令所在路径
     `export [VAR]="xxx"`为系统变量赋值
     `alias [short]=[long]` 为命令设定别名
