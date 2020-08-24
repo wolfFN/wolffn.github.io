@@ -10,6 +10,9 @@ title: Array
 ```javascript
 Array.from() // 类数组 Iterator
 Array.of() // 取代Array()
+
+// 空数组组成的数组
+Array(5).fill().map(() => [])
 ```
 
 [应用](https://www.yuque.com/wolffn/fe/functions#a897e817)
