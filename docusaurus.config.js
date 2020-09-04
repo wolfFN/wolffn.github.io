@@ -1,3 +1,4 @@
+// https://v2.docusaurus.io/
 module.exports = {
     title: "Theo's Documentation Site",
     tagline: 'Hello From Theo',
@@ -9,8 +10,6 @@ module.exports = {
     url: 'https://wolffn.github.io',
     baseUrl: '/',
 
-    themes: ['@docusaurus/theme-classic', '@docusaurus/theme-search-algolia'],
-    // themes: ['@docusaurus/theme-classic'],
     themeConfig: {
         navbar: {
             title: 'Theo',
@@ -19,7 +18,7 @@ module.exports = {
                 src:
                     '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
             },
-            links: [
+            items: [
                 {
                     to: 'docs/web/js/basic',
                     activeBasePath: 'docs/web',
@@ -103,13 +102,14 @@ module.exports = {
             copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
         },
     },
+
     presets: [
         [
             '@docusaurus/preset-classic',
             {
                 docs: {
                     // It is recommended to set document id as docs home page (`docs/` path).
-                    homePageId: 'docs/web/js/basic',
+                    // homePageId: 'docs/web/js/basic',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',

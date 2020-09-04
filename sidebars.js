@@ -30,6 +30,7 @@ module.exports = {
             'web/react/diff',
             'web/react/life-circle',
             'web/react/patterns',
+            'web/react/react-performance',
             'web/react/react-router',
             'web/react/redux-observable',
         ],
