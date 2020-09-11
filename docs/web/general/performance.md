@@ -44,3 +44,29 @@ JavaScript 经常触发浏览器中的视觉变化。 当建立一个 SPA 时更
 - 如果你触发了一个布局，你将会触发一个绘制，因为改变几何形状会导致元素的视觉变化
 - 通过图层提升和动画编排来减少绘制区域。
 
+
+
+## General
+
+### Using CDNs for External Resources
+Browsers restrict the concurrent connection to a single domain to a specific number.  
+File might have been cached  
+High capacity infrastructure  
+
+### Enable gzip Compression on the Web Server
+Accept-Encoding  
+Content-Encoding  
+
+### Avoid Unnecessary Dependencies
+
+### Use Web Workers for CPU Extensive Tasks
+
+### SSR
+performance  
+SEO optimization  
+
+### CSS Animation Instead of JavaScript Animation
+1. Broken CSS rules and styles do not lead to errors of broken web pages.
+2. CSS is quite cheap to interpret as it's declarative
+3. The cost of loading a Javascript animation library is relatively high.
+4. Javascript code can block the UI.

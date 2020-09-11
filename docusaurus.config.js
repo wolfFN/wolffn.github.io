@@ -60,8 +60,8 @@ module.exports = {
         },
         prism: {
             // https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes
-            theme: require('prism-react-renderer/themes/dracula'),
-            // theme: require('prism-react-renderer/themes/github'),
+            // theme: require('prism-react-renderer/themes/dracula'),
+            theme: require('prism-react-renderer/themes/github'),
             // theme: require('prism-react-renderer/themes/palenight'),
         },
         footer: {

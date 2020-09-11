@@ -2,7 +2,7 @@
 title: 'Chrome Dev Tools---[性能篇]'
 tags: [chrome, tools]
 ---
-> 本文主要记录Chrome Dev Tools 关于性能调优的使用方法。基础用法请参见[基础篇](/blog/2017/11/15/Chrome-Dev-Tools-基础篇)  
+> 本文主要记录Chrome Dev Tools 关于性能调优的使用方法。基础用法请参见[基础篇](//wolffn.github.io/blog/2017/11/15/Chrome-Dev-Tools-%E5%9F%BA%E7%A1%80%E7%AF%87/)  
 
 <!--truncate-->
 ## Performance

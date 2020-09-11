@@ -49,13 +49,14 @@ title: Animation
     -   Correctly orders parts of the page onto the screen
     -   Opacity, Transform
 
+![tirggers.png](/img/docs/animation/triggers-detail.png)
 ![tirggers.png](/img/docs/animation/triggers.png)
 
 ### will-change
 
 提前告知浏览器，该 css 属性可能会改变，以让浏览器提前优化。可以用 JS 来增加、删除 `will-change` 属性
 
-## Best Practives
+## Best Practices
 
 -   如果有可能，尽量使用仅触发 `composite` 的 css 属性
 -   避免在拥有许多 DOM 节点的页面进行动画，或过度动画
