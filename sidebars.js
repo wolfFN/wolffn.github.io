@@ -3,6 +3,7 @@ module.exports = {
         Todo: ['web/todo'],
         General: [
             'web/general/network',
+            'web/general/https',
             'web/general/cache',
             'web/general/performance',
             'web/general/security',
