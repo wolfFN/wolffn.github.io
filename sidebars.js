@@ -52,6 +52,7 @@ module.exports = {
     },
     tools: {
         Shell: [
+            'tools/shell/commands',
             'tools/shell/shell-script',
             'tools/shell/tmux',
             'tools/shell/git',
