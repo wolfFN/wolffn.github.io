@@ -2,7 +2,44 @@
 title: 性能
 ---
 
-### 优化渲染性能
+## [Core Web Vitals](https://web.dev/vitals/)
+
+包含一系列能够衡量用户体验各个方面的指标，以及每个指标的目标阈值。当前版本(2020)主要关注三个方面: loading, interactivity, visual stability。主要指标以及参考性能(P75)如下：
+![image.png](/img/docs/general-performance/core-web-vitals.svg)
+
+- **[Largest Contentful Paint (LCP)](https://web.dev/lcp/)**： 显示最大内容元素所需时间， 用以衡量用户可感知的网站初次载入速度，以网页 viewport 最大 Element 载入为基准点。
+- **[First Input Delay (FID)](https://web.dev/fid/)**：用以衡量网战交互的顺畅程度，定义为 TTI 的时间内第一个互动事件的开始时间与浏览器回应事件的时间差。
+- **[Cumulative Layout Shift (CLS)](https://web.dev/cls/)**：用以衡量网页元素的视觉稳定性，量化非预期的的布局偏移累计。可以在 `chrome devtool` 的 `performance` 面板查看，当 CLS 较高时会被标记出来。
+
+### 测量手段
+除了 Google 提供的一些[可视化工具](https://web.dev/vitals-tools/)，我们还可以通过使用 [web-vitals](https://github.com/GoogleChrome/web-vitals) 在 Javascript 中直接获取数据。
+
+```javascript
+import { getCLS, getFID, getLCP } from 'web-vitals';
+
+getCLS(console.log);
+getFID(console.log);
+getLCP(console.log);
+```
+
+可视化工具情况如下：
+![image.png](/img/docs/general-performance/Vitals-Tools-1.png)
+
+### 其他常用指标
+
+* First Contentful Paint（FCP），测量用户打开页面后浏览器呈现的第一个DOM内容所花费的时间（不包括iframe中任何内容）。
+* Speed Index(SI)，衡量页面加载过程中内容从视觉上呈现的速度。
+* Time to Interactive (TTI)，页面变为完全可以交互的状态所耗费的时间。
+* Total Blocking Time (TBT)，衡量页面加载过程中阻塞用户操作的时长，总时间由FCP到TTI之间的所有长任务的阻塞时间相加得出。长任务（long task）的阻塞时间说明：执行时间超过50ms的任务都算做长任务，50ms之后的耗时便是阻塞时间，例如一个70ms的任务，其阻塞时间便为20ms。
+* First Paint (FP)，页面导航与浏览器将网页的第一个像素渲染到屏幕上所用的时间，即任何与输入网页导航前屏幕上内容不同的渲染的时间。
+* First Meaningful Paint（FMP），衡量用户何时能看到页面的主要内容。由于此指标定义依赖于特定浏览器的实现细节，无法实现标准化，计算结果也会因页面加载中的微小差异而产生不一样的结果，因此在核心指标中，被LCP所取代。
+* First CPU Idle，测量页面变为能进行最低限度的交互所花费的时间。当页面准备好为用户输入时，First CPU Idle 和TTI都将开始进行测量，用户可以开始同页面进行交互时，发生First CPU Idle ，当用户能最大程度同页面交互时，发生TTI。被 TBT，TTI 取代。
+* Time To First Byte(TTFB)，发出页面请求到接收到应答数据第一个字节的时间总和，首字节指的是收到的HTTP头的第一个字节。主要用于服务器方面的优化。
+* `performance.timing` ，包含了页面相关的性能信息。
+
+
+
+## 优化渲染性能
 
 如果你想优化你的应用，那么你需要关注五个主要方面。 这些是你可以控制的区域：
 
