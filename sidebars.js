@@ -58,6 +58,7 @@ module.exports = {
             'tools/shell/git',
             'tools/shell/grep',
             'tools/shell/awk',
+            'tools/shell/uniq',
             'tools/shell/npm',
         ],
         Mac: [
