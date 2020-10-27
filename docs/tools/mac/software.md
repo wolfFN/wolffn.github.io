@@ -7,7 +7,7 @@ title: 其他软件
 
 1. 数据库：我个人开发使用`MySQL`以及`Sequel Pro`, 安装配置以及使用指南请参考[这篇文章](http://www.jianshu.com/p/2fab19d96eb8)。
 
-1. [Charles](http://www.jianshu.com/p/8cef3406129c): 抓包/Mock工具，具体配置点击查看。
+1. [Charles](http://www.jianshu.com/p/8cef3406129c): 抓包/Mock工具，具体配置[点击查看](https://www.jianshu.com/p/8cef3406129c)。
 
 ## 常用软件
 1. 浏览器: 日常上网灌水用Safari,占用内存小&省电; 干活用[chrome](https://www.google.com/chrome/index.html).
@@ -19,7 +19,7 @@ title: 其他软件
 
 1. [IINA](https://lhc70000.github.io/iina/zh-cn/) : 多媒体播放,mpv内核,开源软件,快速迭代中,强推.
 1. [Transmission](https://transmissionbt.com/download/): BT下载.
-1. [The Unarchiver](https://itunes.apple.com/tw/app/the-unarchiver/id425424353?l=zh): 解压缩
+1. [The Unarchiver](https://apps.apple.com/cn/app/the-unarchiver/id425424353?l=en&mt=12): 解压缩
 1. [HandShaker](http://www.smartisan.com/apps/handshaker) : 情怀工匠精神锤出品,mac上管理安卓手机文件一把好手.  
 
    * 更新：锤子很久不更新了，现已改用[Airdroid](https://www.airdroid.com/zh-cn/)

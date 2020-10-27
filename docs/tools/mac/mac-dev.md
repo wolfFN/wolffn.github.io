@@ -4,24 +4,16 @@ title: 开发环境配置
 
 [Mac 开发环境配置](https://wolffn.github.io/blog/2017/11/15/Mac%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/)  
 
-### 卸载剩余
-
-```bash
-~/Library/Application Support/(应用程序名称)
-~/Library/Preferences/(应用程序名称)
-~/Library/Caches/(应用程序名称)
-```
-
 ### 快捷键
 
-`Control + F2` 选择左上角菜单栏
-`Control + F3` 选择 dock 栏
-`Cmd + Shift + G`   前往路径
-`Cmd + del`     删除文件
-`Cmd + alt + Esc`   任务管理器
-`Cmd + alt + V`     剪切后粘贴（notes 中格式粘贴，需配合 `Cmd + alt + c`）
-`Cmd + alt + D`     隐藏/显示 Docker
-`Cmd + alt + shift + 4`     截屏
+`Control + F2` 选择左上角菜单栏  
+`Control + F3` 选择 dock 栏  
+`Cmd + Shift + G`   前往路径  
+`Cmd + del`     删除文件  
+`Cmd + alt + Esc`   任务管理器  
+`Cmd + alt + V`     剪切后粘贴（notes 中格式粘贴，需配合 `Cmd + alt + c`）  
+`Cmd + alt + D`     隐藏/显示 Docker  
+`Cmd + alt + shift + 4`     截屏  
 
 ### 键盘、触摸板失灵
 
