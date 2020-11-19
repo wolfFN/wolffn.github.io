@@ -2,9 +2,6 @@
 title: 命令行
 ---
 
-
-## 开发工具
-
 1. Homebrew, 期间会自动安装`Command Line Tools`
    ``` bash
    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -95,7 +92,6 @@ title: 命令行
    ``` bash
     Install 'code' command in PATH
    ```
-
 1. [Jupyter Notebook](http://jupyter.org/) : 
    Jupyter Notebook是一块所见即所得的画布，通过在浏览器上编辑代码，让开发人员实现展示与快速迭代的利器。项目最初给予python，通过安装插件，对Javascript也有良好的支持。
 

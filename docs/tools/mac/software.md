@@ -1,5 +1,5 @@
 ---
-title: 其他软件
+title: 应用软件
 ---
 
 ## 开发工具
@@ -10,29 +10,27 @@ title: 其他软件
 1. [Charles](http://www.jianshu.com/p/8cef3406129c): 抓包/Mock工具，具体配置[点击查看](https://www.jianshu.com/p/8cef3406129c)。
 
 ## 常用软件
-1. 浏览器: 日常上网灌水用Safari,占用内存小&省电; 干活用[chrome](https://www.google.com/chrome/index.html).
-
-1. [Rescue Time](https://www.rescuetime.com/): 日常行为管理,可以分析出日常使用电脑时间分配.细化到软件/网站层面,对于提升工作效率还是很有意义的.
-
-1. [sizeup](http://www.irradiatedsoftware.com/sizeup/): 窗口管理, 多/大显示器尤其实用.  
-   * 备选：Divvy
-
-1. [IINA](https://lhc70000.github.io/iina/zh-cn/) : 多媒体播放,mpv内核,开源软件,快速迭代中,强推.
-1. [Transmission](https://transmissionbt.com/download/): BT下载.
+1. [Chrome](https://www.google.com/chrome/index.html).
+1. [Paste](https://pasteapp.io/): 剪切板增强工具.
+1. [Divvy](https://apps.apple.com/us/app/divvy-window-manager/id413857545?mt=12): 窗口管理, 多/大显示器尤其实用.
+1. [IINA](https://iina.io/) : 多媒体播放,mpv内核,开源软件,快速迭代中,强推.
+1. [Typora](https://www.typora.io/) : MarkDown写作。
+1. [Spark](https://sparkmailapp.com/zh)：邮件客户端.
+1. [欧路词典](https://www.eudic.net/v4/en/app/eudic).
+1. [Logitech](https://support.logi.com/hc/zh-cn/articles/360024361233)：罗技设备，离不开。
+1. [Take a break](https://apps.apple.com/us/app/take-a-break-timer-reminder/id1457158844?mt=12)：每20分钟站起来走走
+1. [PDF Expert](https://pdfexpert.com/zh).
+1. [ClearView](https://itunes.apple.com/us/app/clearview/id557090104?mt=12)：阅读工具，略贵，但完美支持mobi,epub,pdf。
 1. [The Unarchiver](https://apps.apple.com/cn/app/the-unarchiver/id425424353?l=en&mt=12): 解压缩
+1. [NTFS For Mac](https://www.ntfsformac.cn/)：读写 NTFS 文件格式的存储设备。
 1. [HandShaker](http://www.smartisan.com/apps/handshaker) : 情怀工匠精神锤出品,mac上管理安卓手机文件一把好手.  
-
-   * 更新：锤子很久不更新了，现已改用[Airdroid](https://www.airdroid.com/zh-cn/)
-1. [Typora](https://www.typora.io/) : MarkDown写作.Mac上面写作markdown的工具很多,此前一直使用网易云笔记的Markdown功能.客观说做的不错,加上同步很方便.这里郑重推荐Typora,win/Linux/Mac三平台通用,当前处于beta阶段,免费.
+   * 更新：锤子很久不更新了，现已改用[Airdroid](https://www.airdroid.com/zh-cn/)
 1. Welly: 论坛灌水, 北邮人 && 水木网友你们懂的。
    ```bash
    brew cask install welly
    ```
-1. 阅读: [ClearView](https://itunes.apple.com/us/app/clearview/id557090104?mt=12)，略贵，但完美支持mobi,epub,pdf。
 1. [Noizio](http://www.noiz.io/): 白噪音软件,可以组合多种常见白噪音,强推.
-1. [Copia](http://www.dollaropath.com/copia/): 剪切板增强工具.  
-
-   * 不知道为什么这么好用的工具竟然从app store删除了。忍痛买了Paste。
+1. [Rescue Time](https://www.rescuetime.com/): 日常行为管理,可以分析出日常使用电脑时间分配.细化到软件/网站层面,对于提升工作效率还是很有意义的.
 
 ## 美化
 这类软件属于没有无所谓，有了以后心情会好一些，所以推荐可以尝试下。

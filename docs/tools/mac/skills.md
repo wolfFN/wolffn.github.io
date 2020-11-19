@@ -1,8 +1,6 @@
 ---
-title: 开发环境配置
+title: 技巧，快捷键
 ---
-
-[Mac 开发环境配置](https://wolffn.github.io/blog/2017/11/15/Mac%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/)  
 
 ### 快捷键
 

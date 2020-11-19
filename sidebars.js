@@ -65,7 +65,7 @@ module.exports = {
             'tools/mac/system',
             'tools/mac/terminal',
             'tools/mac/software',
-            'tools/mac/mac-dev',
+            'tools/mac/skills',
             'tools/mac/alfred',
             'tools/mac/mysql',
         ],
