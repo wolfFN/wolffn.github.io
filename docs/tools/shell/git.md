@@ -31,6 +31,18 @@ ssh -T git@github.com
 # Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+## 配置用户名密码
+```
+// 为单个项目配置
+git config user.email "wolffn@xxx.com"
+git config user.name wolfFN
+
+// 全局配置
+git config --global user.email "wolffn@xxx.com"
+git config --global user.name "theox"
+
+```
+
 ## Usage:
 
 ```bash
