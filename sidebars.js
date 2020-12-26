@@ -68,6 +68,7 @@ module.exports = {
             'tools/mac/mac-dev',
             'tools/mac/alfred',
             'tools/mac/mysql',
+            'tools/mac/postgreSQL',
         ],
         Ubuntu: ['tools/ubuntu/ubuntu'],
         Tools: [

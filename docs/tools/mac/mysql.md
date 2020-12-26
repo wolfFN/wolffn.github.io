@@ -44,7 +44,7 @@ title: MySQL
    > mysql_secure_installation
 3. 启动`MySQL`服务
    ```bash
-   mysql.server start
+   brew services start mysql
    ```
 4. 按提示`mysql_secure_installation `，设置用户名以及密码
    ```bash
@@ -86,6 +86,9 @@ title: MySQL
    ```sql
    CREATE DATABASE nodejs; 
    GRANT ALL PRIVILEGES ON nodejs.* TO 'nodejs'@'%' IDENTIFIED BY 'nodejs';
+
+   // 8.0
+   GRANT ALL PRIVILEGES ON nodejs.* TO 'nodejs'@'%';
    ```
 
 4. 查找本地`my.conf`位置
