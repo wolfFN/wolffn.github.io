@@ -44,7 +44,7 @@ title: MySQL
    > mysql_secure_installation
 3. 启动`MySQL`服务
    ```bash
-   mysql.server start
+   brew services start mysql
    ```
 4. 按提示`mysql_secure_installation `，设置用户名以及密码
    ```bash
@@ -86,24 +86,40 @@ title: MySQL
    ```sql
    CREATE DATABASE nodejs; 
    GRANT ALL PRIVILEGES ON nodejs.* TO 'nodejs'@'%' IDENTIFIED BY 'nodejs';
+
+   // 8.0
+   GRANT ALL PRIVILEGES ON nodejs.* TO 'nodejs'@'%';
    ```
 
 4. 查找本地`my.conf`位置
    ``` bash
    sudo /usr/libexec/locate.updatedb
    # 可能要等待几分钟，然后继续
-   $ locate my.cnf
+   locate my.cnf
    ```
 5. 只允许本地访问(v5.7.21)，若允许远程访问，则注释掉该行。
    ``` json
    [mysqld]
    bind-address = 127.0.0.1
    ```
+6. `8.0` 版本修改验证方式，以方便各种客户端连接。
+   ``` bash
+   # file [my.cnf], section [mysqld], add line:
+   default-authentication-plugin = mysql_native_password
 
+   # 登陆 root 用户
+   mysql -u root -p
+   ```
 
+   ``` sql
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[password]';
 
+   ALTER USER 'nodejs'@'%' IDENTIFIED WITH mysql_native_password BY 'nodejs';
 
+   exit;
+   ```
 
+   最后重启服务：`brew services restart mysql`
 
 
 ### Sequel Pro
