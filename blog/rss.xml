@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Theo's Documentation Site Blog</title>
+        <link>https://wolffn.github.io/blog</link>
+        <description>Theo's Documentation Site Blog</description>
+        <lastBuildDate>Wed, 07 Oct 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[【转载】30条编程名言佳句]]></title>
+            <link>https://wolffn.github.io/blog/2020/10/07/30条编程名言佳句</link>
+            <guid>【转载】30条编程名言佳句</guid>
+            <pubDate>Wed, 07 Oct 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[以下内容收集自一些优秀的技术书籍章节开头的名言佳句，非常有意思，直接或间接反映了软件开发中的一些事情。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Create React App 中的 Webpack 优化]]></title>
+            <link>https://wolffn.github.io/blog/2020/07/17/Create React App 中的 Webpack 优化</link>
+            <guid>Create React App 中的 Webpack 优化</guid>
+            <pubDate>Fri, 17 Jul 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Create React App 创建的工程，一段时间后，打包速度越来越慢。我对速度和打包体积做了初步的优化，本文记录大概过程。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[QCon上海2019见闻]]></title>
+            <link>https://wolffn.github.io/blog/2019/10/23/QCon上海2019见闻</link>
+            <guid>QCon上海2019见闻</guid>
+            <pubDate>Wed, 23 Oct 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[前段时间有幸去上海参加了Qcon，聆听了业界一些优秀经验、实践的分享，感觉收获很大。尤其对两个分享感触比较深，分别是美团田泱同学分享的： 《云+端一体化：前端工程化探索》，以及字节跳动艾石光同学分享的《微前端在字节跳动的落地》。两个分享虽然落地点不同，但是解决的却是同一个问题：开发效率。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[《子弹笔记》行动指南]]></title>
+            <link>https://wolffn.github.io/blog/2019/05/20/《子弹笔记》行动指南</link>
+            <guid>《子弹笔记》行动指南</guid>
+            <pubDate>Mon, 20 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[核心思想]]></description>
+        </item>
+        <item>
+            <title><![CDATA[记一次对Koa.js middleware的源码贡献]]></title>
+            <link>https://wolffn.github.io/blog/2018/07/06/记一次对Koa.js中间件的源码贡献</link>
+            <guid>记一次对Koa.js middleware的源码贡献</guid>
+            <pubDate>Fri, 06 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[本文主要记录笔者在使用开源Node.js web框架Koa.js过程中遇到的一个小bug，为修复此Bug查找Koa及其middleware源码的过程，以及最终发起Pull Request并被采纳的过程。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[写给Javascript程序员的Jupyter Notebook使用指北]]></title>
+            <link>https://wolffn.github.io/blog/2018/06/14/写给Javascript程序员的Jupyter-Notebook使用指北</link>
+            <guid>写给Javascript程序员的Jupyter Notebook使用指北</guid>
+            <pubDate>Thu, 14 Jun 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Jupyter Notebook是一块所见即所得的画布，通过在浏览器上编辑代码，让开发人员实现展示与快速迭代的利器。项目最初给予python，通过安装插件，对Javascript也有良好的支持。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Chrome Dev Tools---[性能篇]]]></title>
+            <link>https://wolffn.github.io/blog/2018/04/01/Chrome-Dev-Tools-性能篇</link>
+            <guid>Chrome Dev Tools---[性能篇]</guid>
+            <pubDate>Sun, 01 Apr 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[本文主要记录Chrome Dev Tools 关于性能调优的使用方法。基础用法请参见基础篇]]></description>
+        </item>
+        <item>
+            <title><![CDATA[效率至上-一文带你真正走进vim]]></title>
+            <link>https://wolffn.github.io/blog/2018/03/31/效率至上-一文带你真正走进vim</link>
+            <guid>效率至上-一文带你真正走进vim</guid>
+            <pubDate>Sat, 31 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[vim一直是程序员之间比较有争议的一个话题。有人认为她是编辑器之神，有人则认为她古老过时，远远不如IDE，或是以当红小生vscode为代表的图形化文本编辑器。无论爱恨，我们的开发工作，大到远程登录服务器coding，修改config文件，小到git commit message，或多或少总要接触她。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[关于GTD的思考]]></title>
+            <link>https://wolffn.github.io/blog/2018/02/16/关于GTD的思考</link>
+            <guid>关于GTD的思考</guid>
+            <pubDate>Fri, 16 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[WHY GTD]]></description>
+        </item>
+        <item>
+            <title><![CDATA[CSS居中的各种实现方式]]></title>
+            <link>https://wolffn.github.io/blog/2017/11/15/CSS居中的各种实现方式</link>
+            <guid>CSS居中的各种实现方式</guid>
+            <pubDate>Wed, 15 Nov 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[CSS中如何完美做到居中，一直是令前端工程师头疼的问题。最近读到CSS-TRICKS中的一篇帖子，将居中问题的解决方案策略化。感觉收获很大，翻译过来供大家交流学习。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Mac开发环境配置]]></title>
+            <link>https://wolffn.github.io/blog/2017/11/15/Mac开发环境配置</link>
+            <guid>Mac开发环境配置</guid>
+            <pubDate>Wed, 15 Nov 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[本文主要记录Mac开发环境的设置,以及一些优秀软件,使用技巧,等, 后续还会继续逐渐添加.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Chrome Dev Tools---[基础篇]]]></title>
+            <link>https://wolffn.github.io/blog/2017/11/15/Chrome-Dev-Tools-基础篇</link>
+            <guid>Chrome Dev Tools---[基础篇]</guid>
+            <pubDate>Wed, 15 Nov 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[Chrome Dev Tools 是每一位前端工程师开发调试的必备利器，称之为FE的瑞士军刀也毫不为过。然而，每每当发现一些自己不知道的用法时，我们经常会觉得，自己只是掌握了其强大功能的九牛一毛。为了能够让她发挥出最大功效，首先，我们应当了解她更多的使用方法；然后，在开发中合适的场景下，刻意练习使用；最后，熟练掌握那些之前不了解的功能，并为我所为用，最大提升效率。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Linux-Mac-Shell常用命令]]></title>
+            <link>https://wolffn.github.io/blog/2016/08/26/Linux-Mac-Shell常用命令</link>
+            <guid>Linux-Mac-Shell常用命令</guid>
+            <pubDate>Fri, 26 Aug 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[工欲善其事，必先利其器。无论是做哪一方面开发的程序员，都免不了和shell打交道，不管是基于Linux的服务器、开发机，还是Mac。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[github+hexo搭建博客过程全纪录]]></title>
+            <link>https://wolffn.github.io/blog/2016/01/22/github-hexo搭建博客过程全纪录</link>
+            <guid>github+hexo搭建博客过程全纪录</guid>
+            <pubDate>Fri, 22 Jan 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[本文记录mac上搭建hexo+github blog的全过程]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://wolffn.github.io/blog/2010/01/01/welcome</link>
+            <guid>Welcome</guid>
+            <pubDate>Fri, 01 Jan 2010 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blog features are powered by the blog plugin. Simply add files to the blog directory. It supports tags as well!]]></description>
+        </item>
+    </channel>
+</rss>
