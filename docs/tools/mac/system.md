@@ -32,21 +32,21 @@ title: 系统设置
 1. 取消自动更新: 
    1. `Software Update` -> 取消勾选 `Automatically keep my Mac up to date`, `Advanced` -> 取消勾选 `Check for updates`.
    2. `App Store`  -> `Preference` -> 取消勾选 `Automatically Updates`
-2. 固定桌面顺序：`Mission Control` -> 取消勾选 `Automatically rearrange Spaces based on most recent use`
-3. `Dictionary -> Preferences`,  添加 `牛津英汉汉英词典` `现代汉语规范词典`.
-4. 菜单上显示音量控制图标:`System Preference` -> `Sound` -> `Show volume in menu bar`
-5. 菜单上显示蓝牙图标: `System Preference` -> `BlueTooth` -> `Show BlueTooth in menu bar`
-6.  移除Guest用户: `System Preference` -> `Users&Groups` -> `Guest User` -> `Allow guests to log in this computer`
-7. 找回`open any where`选项.
+1. 固定桌面顺序：`Mission Control` -> 取消勾选 `Automatically rearrange Spaces based on most recent use`
+1. `Dictionary -> Preferences`,  添加 `牛津英汉汉英词典` `现代汉语规范词典`.
+1. 菜单上显示音量控制图标:`System Preference` -> `Sound` -> `Show volume in menu bar`
+1. 菜单上显示蓝牙图标: `System Preference` -> `BlueTooth` -> `Show BlueTooth in menu bar`
+1.  移除Guest用户: `System Preference` -> `Users&Groups` -> `Guest User` -> `Allow guests to log in this computer`
+1. 找回`open any where`选项.
    ```bash
    sudo spctl --master-disable
    ```
-8. 打开子像素抗锯齿，解决vscode字体太细问题
+1. 打开子像素抗锯齿，解决vscode字体太细问题
    ```bash
    defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
    ```
-9. 热区锁屏:`Desktop && Screen Saver` -> `Screen Saver` -> `Hot Corners`. 右下角选择：`Put Display to Sleep`。左下角选择：`Desktop`
-10. `~/.vimrc`:
+1. 热区锁屏:`Desktop && Screen Saver` -> `Screen Saver` -> `Hot Corners`. 右下角选择：`Put Display to Sleep`。左下角选择：`Desktop`
+1. `~/.vimrc`:
 
    ``` bash
    syntax on
@@ -57,4 +57,4 @@ title: 系统设置
    set cursorline
    ```
 
-11. [一键开启 HiDPI](https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md)
+1. [一键开启 HiDPI](https://github.com/xzhih/one-key-hidpi/blob/master/README-zh.md)

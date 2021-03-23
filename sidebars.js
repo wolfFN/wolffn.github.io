@@ -8,7 +8,7 @@ module.exports = {
             'web/general/performance',
             'web/general/security',
         ],
-        Javascript: [
+        JavaScript: [
             'web/js/basic',
             'web/js/array',
             'web/js/object',
@@ -17,6 +17,9 @@ module.exports = {
             'web/js/memory',
             'web/js/regex',
             'web/js/module',
+        ],
+        TypeScript: [
+            'web/ts/basic',
         ],
         CSS: [
             'web/css/basic',
