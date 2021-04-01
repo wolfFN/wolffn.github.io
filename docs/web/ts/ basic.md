@@ -179,3 +179,398 @@ function initialize() {
 
 
 ## 类型守卫
+执行一些代码进行运行时检查，尝试检测属性、方法或原型，进而确定如何处理值。  
+```
+in
+typeof
+instanceof
+```
+
+## 联合类型
+``` typescript
+const sayHello = (name: string | undefined) => {
+    /* ... */
+};
+let num: 1 | 2 = 1;
+type EventNames = 'click' | 'scroll' | 'mousemove';
+```
+
+### 可辨识联合(Discriminated Unions)
+// todo
+
+### 类型别名
+``` typescript
+type Message = string | string[];
+```
+
+## 交叉类型
+通过 `&` 运算符将多种类型叠加到一起，形成一个新的类型。若两个类型有相同成员，切为基础类型，比如 number & string， 合成后其类型never。若为复合类型，则会继续进行合并。
+``` typescript
+type PartialPointX = { x: number };
+type Point = PartialPointX & { y: number };
+
+const point: Point = {
+    x: 1,
+    y: 1,
+};
+```
+
+## 函数
+可选参数，用 `?` 表示；默认参数用 `=` 赋值。
+``` typescript
+// 可选参数
+function createUserId(name = 'Theo', id: number, age?: number): string {
+    return name + id;
+}
+```
+相比于 JS，TS 由于类型系统的存在，可以实现函数重载。既可以实现普通函数重载，也可以实现类中成员方法的重载。  
+TS 编译器处理函数时，会找到重载列表，然后从签到后尝试使用。所以在定义重载函数时，应该将最精确的定义放到最前面。  
+参数类型不同、参数个数不同、或参数先后顺序不同都会造成重载。
+
+## 接口
+TS 中接口是一个相对灵活的概念，除了可用于对类的一部分进行抽象，还可用以描述对象的形状（Shape）。
+``` typescript
+interface Person {
+    name: string;
+    // 只读
+    readonly age: number;
+    // 可选
+    sex?: string;
+    // 创建后无法再被修改
+    job: ReadonlyArray<string>;
+    // 索引签名，用以实现任意属性
+    [propName: string]: any;
+}
+```
+
+### Interface vs Type
+Interface 和 Type 都可以用来描述对象的形状或函数签名。区别如下
+1. Type 可以用于一些其他类型，比如原始类型、联合类型和元祖。
+2. 扩展操作(type 是否可以扩展 interface ?)
+   ``` typescript
+    interface PartialPointX {
+        x: number;
+    }
+    interface Point extends PartialPointX {
+        y: number;
+    }
+
+    type PartialPointX = { x: number };
+    type Point = PartialPointX & { y: number };
+
+    type PartialPointX = { x: number };
+    interface Point extends PartialPointX {
+        y: number;
+    }
+
+    interface PartialPointX {
+        x: number;
+    }
+    type Point = PartialPointX & { y: number };
+   ```
+3. Class 可以用相同方式实现 Interface 和 Type，但不能实现 Type 定义的联合类型。
+4. 接口可以定义多次，会自动合并。
+   ``` typescript
+    interface Point { x: number; }
+    interface Point { y: number; }
+
+    const point: Point = { x: 1, y: 2 };
+   ```
+## Class
+static 静态属性，方法  
+\# 私有字段  
+extends 继承  
+abstract 抽象  
+访问器
+``` typescript
+let passCode = 'Hello TypeScript';
+
+class Employee {
+    private _fullName: string;
+
+    get fullName(): string {
+        return this._fullName;
+    }
+
+    set fullName(newName: string) {
+        if (passCode && passCode == 'Hello TypeScript') {
+            this._fullName = newName;
+        } else {
+            console.log('Error: Unauthorized update of employee!');
+        }
+    }
+}
+
+let employee = new Employee();
+employee.fullName = 'XXX YYY';
+if (employee.fullName) {
+    console.log(employee.fullName);
+}
+```
+
+## 泛型 Generics
+泛型是允许同一个函数接收不同类型参数的一种模板。创建针对不同类型可复用的组件/函数时，泛型相比于 any 的优点在于可以保留参数类型。  
+``` typescript
+function identity<T>(value: T): T {
+    return value;
+}
+
+function identity<T, U>(value: T, message: U): T {
+    console.log(message);
+    return value;
+}
+
+console.log(identity<Number, string>(68, 'MSG'));
+```
+
+在上述代码中，`<T>` 内部的 `T` 被称为类型变量，用作类型占位符，被分配 value 参数以及函数返回值，作为其类型。  
+`T` 代表 Type，在定义泛型时通常用作第一个类型变量的名称。可以用任何有效名称代替。常用泛型变量代表如下：
+* K（Key）：表示对象中的键类型；
+* V（Value）：表示对象中的值类型；
+* E（Element）：表示元素类型。
+
+
+``` typescript
+// 泛型接口
+interface GenericIdentityFn<T> {
+    (arg: T): T;
+}
+
+// 泛型类
+class GenericNumber<T> {
+    zeroValue: T;
+    add: (x: T, y: T) => T;
+}
+
+let myGenericNumber = new GenericNumber<number>();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function (x, y) {
+    return x + y;
+};
+
+```
+
+### 泛型工具
+`typeof` 操作符可以用来获取一个变量声明或对象的类型。  
+`Partial<T>` 可以将某个类型里的属性全部变为可选项 ?。  
+
+
+
+`keyof` 可以用于获取某种类型的所有键，其返回类型是联合类型。  
+``` typescript
+interface Person {
+    name: string;
+    age: number;
+}
+
+type K1 = keyof Person; // "name" | "age"
+type K2 = keyof Person[]; // "length" | "toString" | "pop" | "push" | "concat" | "join"
+type K3 = keyof { [x: string]: Person }; // string | number
+```
+
+`in` 用来遍历枚举类型：
+``` typescript
+type Keys = 'a' | 'b' | 'c';
+
+type Obj = {
+    [p in Keys]: any;
+}; // -> { a: any, b: any, c: any }
+```
+
+`infer` 声明一个类型变量并且对它进行使用。 infer R 就是声明一个变量来承载传入函数签名的返回值类型，简单说就是用它取到函数返回值的类型方便之后使用。
+``` typescript
+type SomeType<T> = T extends (...args: any[]) => infer R ? R : any;
+```
+
+`extends` 可以对泛型进行某些约束
+``` typescript
+interface Lengthwise {
+    length: number;
+}
+
+function loggingIdentity<T extends Lengthwise>(arg: T): T {
+    console.log(arg.length);
+    return arg;
+}
+loggingIdentity(3); // Error, number doesn't have a .length property
+loggingIdentity({ length: 10, value: 3 });
+```
+
+## 装饰器
+* 装饰器是一个表达式。  
+* 被执行后，返回一个函数。函数的入参分别为 target, name, descriptor。  
+* 执行该函数后，可能返回 descriptor 对象，用以配置 target 对象。  
+
+### 类装饰器
+只接收一个参数
+* target: TFunction - 被装饰的类
+``` typescript
+function Greeter(greeting: string) {
+    return function (target: Function) {
+        target.prototype.greet = function (): void {
+            console.log(greeting);
+        };
+    };
+}
+
+// 若不需要参数，此处可以直接 @Greeter
+@Greeter('Hello TS!')
+class Greeting {
+    constructor() {
+        // 内部实现
+    }
+}
+
+let myGreeting = new Greeting();
+(myGreeting as any).greet(); // console output: 'Hello TS!';
+```
+
+### 属性装饰器
+接收两个参数
+* target: Object - 被装饰的类
+* propertyKey: string | symbol - 被装饰类的属性名
+``` typescript
+function logProperty(target: any, key: string) {
+    delete target[key];
+
+    const backingField = '_' + key;
+
+    Object.defineProperty(target, backingField, {
+        writable: true,
+        enumerable: true,
+        configurable: true,
+    });
+
+    // property getter
+    const getter = function (this: any) {
+        const curVal = this[backingField];
+        console.log(`Get: ${key} => ${curVal}`);
+        return curVal;
+    };
+
+    // property setter
+    const setter = function (this: any, newVal: any) {
+        console.log(`Set: ${key} => ${newVal}`);
+        this[backingField] = newVal;
+    };
+
+    // Create new property with getter and setter
+    Object.defineProperty(target, key, {
+        get: getter,
+        set: setter,
+        enumerable: true,
+        configurable: true,
+    });
+}
+
+class Person {
+    @logProperty
+    public name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+const p1 = new Person('Hello');
+p1.name = 'World';
+```
+
+### 方法装饰器
+接收三个参数：
+* target: Object - 被装饰的类
+* propertyKey: string | symbol - 方法名
+* descriptor: TypePropertyDescript - 属性描述符
+``` typescript
+function log(
+    target: Object,
+    propertyKey: string,
+    descriptor: PropertyDescriptor,
+) {
+    let originalMethod = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+        console.log('wrapped function: before invoking ' + propertyKey);
+        let result = originalMethod.apply(this, args);
+        console.log('wrapped function: after invoking ' + propertyKey);
+        return result;
+    };
+}
+
+class Task {
+    @log
+    runTask(arg: any): any {
+        console.log('runTask invoked, args: ' + arg);
+        return 'finished';
+    }
+}
+
+let task = new Task();
+let result = task.runTask('learn ts');
+console.log('result: ' + result);
+
+```
+
+### 参数装饰器
+接收三个参数
+* target: Object - 被装饰的类
+* propertyKey: string | symbol - 方法名
+* parameterIndex: number - 方法中参数的索引值
+``` typescript
+function Log(target: Function, key: string, parameterIndex: number) {
+    let functionLogged = key || target.prototype.constructor.name;
+    console.log(`The parameter in position ${parameterIndex} at ${functionLogged} has
+      been decorated`);
+}
+
+class Greeter {
+    greeting: string;
+    constructor(@Log phrase: string) {
+        this.greeting = phrase;
+    }
+}
+```
+
+## New Feature
+### 构造函数的类属性推断
+当 noImplicitAny 配置属性被启用之后，TypeScript 4.0 就可以使用控制流分析来确认类中的属性类型：
+``` typescript
+class Person {
+    fullName; // (property) Person.fullName: string
+    firstName; // (property) Person.firstName: string | undefined
+    lastName; // (property) Person.lastName: string | undefined
+
+    constructor(fullName: string) {
+        this.fullName = fullName;
+        if (Math.random()) {
+            this.firstName = fullName.split(' ')[0];
+            this.lastName = fullName.split(' ')[1];
+        }
+    }
+}
+```
+
+### 标记的元组元素
+我们使用元组类型来声明剩余参数的类型：
+``` typescript
+function addPerson(...args: [string, number]): void {
+    console.log(`Person info: name: ${args[0]}, age: ${args[1]}`);
+}
+
+addPerson('lolo', 5); // Person info: name: lolo, age: 5
+
+// 显式设置变量名
+function addPerson(name: string, age: number) {
+  console.log(`Person info: name: ${name}, age: ${age}`)
+}
+```
+
+
+相比于显式变量名，虽然这样对类型检查没有影响，但在元组位置上缺少标签，会使得它们难于使用。为了提高开发者使用元组的体验，TypeScript 4.0 支持为元组类型设置标签
+``` typescript
+function addPerson(...args: [name: string, age: number]): void {
+    console.log(`Person info: name: ${args[0]}, age: ${args[1]}`);
+}
+```
+
+# Reference
+* [一份不可多得的 TS 学习指南](https://segmentfault.com/a/1190000024458956)
