@@ -15,15 +15,26 @@ module.exports = {
             title: 'Theo',
             logo: {
                 alt: 'My Site Logo',
-                src:
-                    '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
+                src: '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.svg',
             },
             items: [
                 {
                     to: 'docs/web/js/basic',
                     activeBasePath: 'docs/web',
-                    label: 'Wed Development',
+                    label: 'Development',
                     position: 'left',
+                    items: [
+                        {
+                            label: 'General',
+                            to: 'docs/web/general/network',
+                            activeBasePath: 'docs/web/general',
+                        },
+                        {
+                            label: 'JavaScript',
+                            to: 'docs/web/js/basic',
+                            activeBasePath: 'docs/web/js',
+                        },
+                    ],
                 },
                 {
                     to: 'docs/snippets/js/conditional',
