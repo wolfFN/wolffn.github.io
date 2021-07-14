@@ -1,58 +1,59 @@
 module.exports = {
-    web: {
-        Todo: ['web/todo'],
-        General: [
-            'web/general/network',
-            'web/general/https',
-            'web/general/cache',
-            'web/general/performance',
-            'web/general/security',
-        ],
-        JavaScript: [
-            'web/js/basic',
-            'web/js/array',
-            'web/js/object',
-            'web/js/destruct',
-            'web/js/event-loop',
-            'web/js/memory',
-            'web/js/regex',
-            'web/js/module',
-        ],
-        TypeScript: [
-            'web/ts/basic',
-        ],
-        CSS: [
-            'web/css/basic',
-            'web/css/blank',
-            'web/css/margin',
-            'web/css/animation',
-        ],
+    General: [
+        'general/todo',
+        'general/network',
+        'general/https',
+        'general/cache',
+        'general/performance',
+        'general/security',
+    ],
+    JavaScript: [
+        'javascript/basic',
+        'javascript/array',
+        'javascript/object',
+        'javascript/destruct',
+        'javascript/event-loop',
+        'javascript/memory',
+        'javascript/regex',
+        'javascript/module',
+        {
+            TypeScript: ['javascript/typescript/basic'],
+            snippets: [
+                'javascript/snippets/conditional',
+                'javascript/snippets/functions',
+                'javascript/snippets/animation',
+            ],
+        },
+    ],
 
-        React: [
-            'web/react/basic',
-            'web/react/react-performance',
-            'web/react/conditional-rendering',
-            'web/react/diff',
-            'web/react/life-circle',
-            'web/react/patterns',
-            'web/react/react-router',
-            'web/react/redux-observable',
-        ],
-        Vue: ['web/vue/deep-selector'],
-        Library: [
-            'web/library/node',
-            'web/library/hapi',
-            'web/library/sequelize',
-        ],
-    },
-    snippets: {
-        Javascript: [
-            'snippets/js/conditional',
-            'snippets/js/functions',
-            'snippets/js/animation',
-        ],
-        CSS: ['snippets/css/tricks'],
-    },
+    CSS: [
+        'css/basic',
+        'css/blank',
+        'css/margin',
+        'css/animation',
+        {
+            snippets: ['css/snippets/tricks'],
+        },
+    ],
+
+    Library: [
+        'library/node',
+        'library/hapi',
+        'library/sequelize',
+        {
+            React: [
+                'library/react/basic',
+                'library/react/react-performance',
+                'library/react/conditional-rendering',
+                'library/react/diff',
+                'library/react/life-circle',
+                'library/react/patterns',
+                'library/react/react-router',
+                'library/react/redux-observable',
+            ],
+            Vue: ['library/vue/deep-selector'],
+        },
+    ],
     tools: {
         Shell: [
             'tools/shell/commands',
@@ -70,8 +71,6 @@ module.exports = {
             'tools/mac/software',
             'tools/mac/skills',
             'tools/mac/alfred',
-            'tools/mac/mysql',
-            'tools/mac/postgreSQL',
         ],
         Ubuntu: ['tools/ubuntu/ubuntu'],
         Tools: [
@@ -79,7 +78,16 @@ module.exports = {
             'tools/tools/webstorm',
             'tools/tools/chrome',
         ],
-        MySQL: ['tools/mysql/operation', 'tools/mysql/dump'],
+        Database: [
+            {
+                MySQL: [
+                    'tools/database/operation',
+                    'tools/database/dump',
+                    'tools/database/mac-install',
+                ],
+            },
+            'tools/database/postgreSQL',
+        ],
         软技能: [
             'tools/soft/delay',
             'tools/soft/team-work',

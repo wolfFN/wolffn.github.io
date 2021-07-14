@@ -1,5 +1,5 @@
 ---
-title: MySQL
+title: Mac Install
 ---
 > 为了响应`nodejs`的大红大紫，最近应用其实现了一些server端的功能。数据库方面选择了老少咸宜的`MySQL`。今后肯定还会有相关应用需求。特此记录`Mac`系统下如何安装、配置`MySQL`及其管理工具`Squel Pro`。
 

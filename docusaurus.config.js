@@ -26,20 +26,25 @@ module.exports = {
                     items: [
                         {
                             label: 'General',
-                            to: 'docs/web/general/network',
-                            activeBasePath: 'docs/web/general',
+                            to: 'docs/general/todo',
+                            activeBasePath: 'docs/general',
                         },
                         {
                             label: 'JavaScript',
-                            to: 'docs/web/js/basic',
-                            activeBasePath: 'docs/web/js',
+                            to: 'docs/javascript/basic',
+                            activeBasePath: 'docs/javascript',
+                        },
+                        {
+                            label: 'CSS',
+                            to: 'docs/css/basic',
+                            activeBasePath: 'docs/css',
                         },
                     ],
                 },
                 {
-                    to: 'docs/snippets/js/conditional',
-                    activeBasePath: 'docs/snippets',
-                    label: 'Snippets',
+                    to: 'docs/library/node',
+                    activeBasePath: 'docs/library',
+                    label: 'Library',
                     position: 'left',
                 },
                 {
