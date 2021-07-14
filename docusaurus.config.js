@@ -19,8 +19,8 @@ module.exports = {
             },
             items: [
                 {
-                    to: 'docs/web/js/basic',
-                    activeBasePath: 'docs/web',
+                    to: 'docs/javascript/basic',
+                    activeBasePath: 'docs/javascript',
                     label: 'Development',
                     position: 'left',
                     items: [
@@ -88,7 +88,7 @@ module.exports = {
                     items: [
                         {
                             label: 'JS Basic',
-                            to: 'docs/web/js/basic',
+                            to: 'docs/javascript/basic',
                         },
                     ],
                 },
@@ -125,7 +125,7 @@ module.exports = {
             {
                 docs: {
                     // It is recommended to set document id as docs home page (`docs/` path).
-                    // homePageId: 'docs/web/js/basic',
+                    // homePageId: 'docs/javascript/basic',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
