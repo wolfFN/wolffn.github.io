@@ -87,8 +87,33 @@ module.exports = {
                     title: 'Docs',
                     items: [
                         {
-                            label: 'JS Basic',
+                            label: 'JavaScript',
                             to: 'docs/javascript/basic',
+                        },
+                        {
+                            label: 'TypeScript',
+                            to: 'docs/javascript/typescript/basic',
+                        },
+                    ],
+                },
+                {
+                    title: 'Tools',
+                    items: [
+                        {
+                            label: 'VS Code',
+                            to: 'docs/tools/tools/vscode',
+                        },
+                        {
+                            label: 'VIM',
+                            to: 'blog/2018/03/31/效率至上-一文带你真正走进vim',
+                        },
+                        {
+                            label: 'Shell',
+                            to: 'blog/2016/08/26/Linux-Mac-Shell常用命令',
+                        },
+                        {
+                            label: 'Chrome',
+                            to: 'blog/2018/04/01/Chrome-Dev-Tools-性能篇',
                         },
                     ],
                 },
@@ -99,11 +124,6 @@ module.exports = {
                             label: 'Twitter',
                             href: 'https://twitter.com/wolfFNs',
                         },
-                    ],
-                },
-                {
-                    title: 'More',
-                    items: [
                         {
                             label: 'Blog',
                             to: 'https://wolffn.github.io/blog/',
@@ -115,7 +135,7 @@ module.exports = {
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Wolffn. Built with Docusaurus.`,
         },
     },
 
