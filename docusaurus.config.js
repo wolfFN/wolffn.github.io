@@ -48,14 +48,14 @@ module.exports = {
                 },
 
                 {
-                    to: 'docs/data-science/db/operation',
+                    to: 'docs/data-science/db/table',
                     activeBasePath: 'docs/data-science',
                     label: 'Data Science',
                     position: 'left',
                     items: [
                         {
                             label: 'Database',
-                            to: 'docs/data-science/db/operation',
+                            to: 'docs/data-science/db/table',
                             activeBasePath: 'docs/data-science/db',
                         },
                     ],

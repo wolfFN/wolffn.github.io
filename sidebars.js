@@ -57,7 +57,7 @@ module.exports = {
         {
             MySQL: [
                 'data-science/db/install-on-mac',
-                'data-science/db/operation',
+                'data-science/db/table',
                 'data-science/db/dump',
             ],
         },
