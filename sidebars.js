@@ -25,7 +25,6 @@ module.exports = {
             ],
         },
     ],
-
     CSS: [
         'css/basic',
         'css/blank',
@@ -35,7 +34,6 @@ module.exports = {
             snippets: ['css/snippets/tricks'],
         },
     ],
-
     Library: [
         'library/node',
         'library/hapi',
@@ -54,6 +52,18 @@ module.exports = {
             Vue: ['library/vue/deep-selector'],
         },
     ],
+
+    Database: [
+        {
+            MySQL: [
+                'data-science/db/install-on-mac',
+                'data-science/db/operation',
+                'data-science/db/dump',
+            ],
+        },
+        'data-science/db/postgreSQL',
+    ],
+
     tools: {
         Shell: [
             'tools/shell/commands',
@@ -78,16 +88,7 @@ module.exports = {
             'tools/tools/webstorm',
             'tools/tools/chrome',
         ],
-        Database: [
-            {
-                MySQL: [
-                    'tools/database/operation',
-                    'tools/database/dump',
-                    'tools/database/mac-install',
-                ],
-            },
-            'tools/database/postgreSQL',
-        ],
+
         软技能: [
             'tools/soft/delay',
             'tools/soft/team-work',

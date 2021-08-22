@@ -1,5 +1,5 @@
 ---
-title: Mac Install
+title: Install On Mac
 ---
 > 为了响应`nodejs`的大红大紫，最近应用其实现了一些server端的功能。数据库方面选择了老少咸宜的`MySQL`。今后肯定还会有相关应用需求。特此记录`Mac`系统下如何安装、配置`MySQL`及其管理工具`Squel Pro`。
 
@@ -61,15 +61,15 @@ title: Mac Install
 
 1. 基本命令
    ```sql
-   // 查看有哪些数据库
+   # 查看有哪些数据库
    show databases;
-   // 查看当前使用的是哪个数据库
+   # 查看当前使用的是哪个数据库
    select database();
-   // 选择数据库
+   # 选择数据库
    use [database-name];
-   // 显示数据库中的tables
+   # 显示数据库中的tables
    show tables;
-   // 建立数据库
+   # 创建新数据库
    CREATE DATABASE [new-database-name]; 
    ```
 

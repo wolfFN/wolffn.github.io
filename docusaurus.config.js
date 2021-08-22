@@ -21,7 +21,7 @@ module.exports = {
                 {
                     to: 'docs/javascript/basic',
                     activeBasePath: 'docs/javascript',
-                    label: 'Development',
+                    label: 'Web',
                     position: 'left',
                     items: [
                         {
@@ -39,14 +39,28 @@ module.exports = {
                             to: 'docs/css/basic',
                             activeBasePath: 'docs/css',
                         },
+                        {
+                            label: 'Libraries',
+                            to: 'docs/library/node',
+                            activeBasePath: 'docs/library',
+                        },
                     ],
                 },
+
                 {
-                    to: 'docs/library/node',
-                    activeBasePath: 'docs/library',
-                    label: 'Library',
+                    to: 'docs/data-science/db/operation',
+                    activeBasePath: 'docs/data-science',
+                    label: 'Data Science',
                     position: 'left',
+                    items: [
+                        {
+                            label: 'Database',
+                            to: 'docs/data-science/db/operation',
+                            activeBasePath: 'docs/data-science/db',
+                        },
+                    ],
                 },
+
                 {
                     to: 'docs/algorithm/tree/traverse',
                     activeBasePath: 'docs/algorithm',
