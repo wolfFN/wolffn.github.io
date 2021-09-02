@@ -74,6 +74,21 @@ VALUES ('A101', '佐藤', 40),
        ('A103', '中川', 20),
        ('A104', '渡边', 23),
        ('A105', '西泽', 35);
+
+-- 创建表格，并插入数据
+DROP TABLE IF EXISTS tb;
+CREATE TABLE tb (empid VARCHAR(20),sales INT,month INT);
+INSERT INTO tb VALUES ('A103',101,4);
+INSERT INTO tb VALUES ('A102',54,5);
+INSERT INTO tb VALUES ('A104',181,4);
+INSERT INTO tb VALUES ('A101',184,4);
+INSERT INTO tb VALUES ('A103', 17,5);
+INSERT INTO tb VALUES ('A101',300,5);
+INSERT INTO tb VALUES ('A102',205,6);
+INSERT INTO tb VALUES ('A104', 93,5);
+INSERT INTO tb VALUES ('A103', 12,6);
+INSERT INTO tb VALUES ('A107', 87,6);
+
 ```
 
 
