@@ -61,6 +61,8 @@ module.exports = {
                 'data-science/db/table',
                 'data-science/db/data-type',
                 'data-science/db/select',
+                'data-science/db/update',
+                'data-science/db/delete',
             ],
         },
         'data-science/db/postgreSQL',

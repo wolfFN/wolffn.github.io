@@ -58,7 +58,7 @@ SELECT empid, sales,
         WHEN sales >= 50 THEN '中等'
         ELSE '低' 
     END AS 评价
-FROM tb;
+FROM sales;
 ```
 
 
@@ -80,14 +80,14 @@ SELECT * FROM employee ORDER BY age DESC LIMIT 2 OFFSET 1;
 ## GROUP BY
 ```sql
 -- 每个 empid，仅显示一个值
-SELECT * FROM tb GROUP BY empid;
+SELECT * FROM sales GROUP BY empid;
 
 -- 每个 empid 出现次数
-SELECT empid, COUNT(*) AS 个数 FROM tb GROUP BY empid;
+SELECT empid, COUNT(*) AS 个数 FROM sales GROUP BY empid;
 
 -- 每个 empid, sales 总和
 SELECT empid, SUM(sales) AS 合计
-FROM tb
+FROM sales
 GROUP BY empid;
 ```
 
@@ -96,7 +96,7 @@ GROUP BY empid;
 显示列 sales 总和大于等于 200 的 empid。
 ```sql
 SELECT empid, SUM(sales) AS 合计
-FROM tb
+FROM sales
 GROUP BY empid
 HAVING SUM(sales) >= 200;
 ```
@@ -105,7 +105,7 @@ HAVING SUM(sales) >= 200;
 先选取记录，再分组
 ```sql
 SELECT empid, AVG(sales) AS 合计
-FROM tb
+FROM sales
 WHERE sales > 50
 GROUP BY empid;
 ```
@@ -114,7 +114,7 @@ GROUP BY empid;
 排序会在 SELECT，GROUP BY 之后进行
 ```sql
 SELECT empid, AVG(sales) AS 合计
-FROM tb
+FROM sales
 GROUP BY empid
 ORDER BY AVG(sales);
 ```

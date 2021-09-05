@@ -76,18 +76,18 @@ VALUES ('A101', '佐藤', 40),
        ('A105', '西泽', 35);
 
 -- 创建表格，并插入数据
-DROP TABLE IF EXISTS tb;
-CREATE TABLE tb (empid VARCHAR(20),sales INT,month INT);
-INSERT INTO tb VALUES ('A103',101,4);
-INSERT INTO tb VALUES ('A102',54,5);
-INSERT INTO tb VALUES ('A104',181,4);
-INSERT INTO tb VALUES ('A101',184,4);
-INSERT INTO tb VALUES ('A103', 17,5);
-INSERT INTO tb VALUES ('A101',300,5);
-INSERT INTO tb VALUES ('A102',205,6);
-INSERT INTO tb VALUES ('A104', 93,5);
-INSERT INTO tb VALUES ('A103', 12,6);
-INSERT INTO tb VALUES ('A107', 87,6);
+DROP TABLE IF EXISTS sales;
+CREATE TABLE sales (empid VARCHAR(20),sales INT,month INT);
+INSERT INTO sales VALUES ('A103',101,4);
+INSERT INTO sales VALUES ('A102',54,5);
+INSERT INTO sales VALUES ('A104',181,4);
+INSERT INTO sales VALUES ('A101',184,4);
+INSERT INTO sales VALUES ('A103', 17,5);
+INSERT INTO sales VALUES ('A101',300,5);
+INSERT INTO sales VALUES ('A102',205,6);
+INSERT INTO sales VALUES ('A104', 93,5);
+INSERT INTO sales VALUES ('A103', 12,6);
+INSERT INTO sales VALUES ('A107', 87,6);
 
 ```
 
@@ -98,6 +98,12 @@ INSERT INTO tb VALUES ('A107', 87,6);
 CREATE TABLE [new table name] SELECT * from [source table name];
 -- example
 CREATE TABLE tb1A SELECT * from employee;
+
+-- 复制部分数据
+CREATE TABLE sales_copy
+SELECT * from sales
+ORDER BY sales DESC
+LIMIT 4 OFFSET 1;
 ```
 
 复制表的列结构，创建新表。这种方法虽然不会复制表中的记录，但是会复制 `AUTO_INCREMENT` 和 `PRIMARY KEY` 等列的属性。
