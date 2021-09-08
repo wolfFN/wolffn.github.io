@@ -63,6 +63,7 @@ module.exports = {
                 'data-science/db/select',
                 'data-science/db/update',
                 'data-science/db/delete',
+                'data-science/db/join',
             ],
         },
         'data-science/db/postgreSQL',

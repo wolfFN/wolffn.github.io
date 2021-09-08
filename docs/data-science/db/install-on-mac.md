@@ -122,6 +122,22 @@ title: Install On Mac
    最后重启服务：`brew services restart mysql`
 
 
+### ONLY_FULL_GROUP_BY
+MySQL 5.7.5 及以上，默认支持依赖检测功能。在 ONLY_FULL_GROUP_BY SQL 模式下，MySQL 不逊于 SELECT，HAVING 或 ORDER BY 中出险 GROUP BY 中未出现的可聚合列。  
+如何关闭：
+```sql
+SELECT @@GLOBAL.sql_mode;
+-- 查看全局 mode，结果如下
+-- ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+
+-- 修改模式，移除 ONLY_FULL_GROUP_BY
+SET sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- 查看当前 session mode，确认修改结果
+SELECT @@SESSION.sql_mode;
+```
+
+
 ### Sequel Pro
 
 
