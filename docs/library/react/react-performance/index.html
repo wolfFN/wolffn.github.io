@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.63">
 <link rel="search" type="application/opensearchdescription+xml" title="Theo's Documentation Site" href="/opensearch.xml"><title data-react-helmet="true">性能 | Theo&#x27;s Documentation Site</title><meta data-react-helmet="true" name="docsearch:version" content="current,latest"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="性能 | Theo&#x27;s Documentation Site"><meta data-react-helmet="true" name="description" content="Reduce Bundle Size"><meta data-react-helmet="true" property="og:description" content="Reduce Bundle Size"><meta data-react-helmet="true" property="og:url" content="https://wolffn.github.io/docs/library/react/react-performance"><link data-react-helmet="true" rel="shortcut icon" href="//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="true"><link data-react-helmet="true" rel="canonical" href="https://wolffn.github.io/docs/library/react/react-performance"><link rel="stylesheet" href="/styles.db9411ae.css">
-<link rel="preload" href="/styles.1e5c332b.js" as="script">
-<link rel="preload" href="/runtime~main.84b58f74.js" as="script">
-<link rel="preload" href="/main.0d5412dc.js" as="script">
-<link rel="preload" href="/1.3f0ee7a3.js" as="script">
-<link rel="preload" href="/2.263d9b13.js" as="script">
-<link rel="preload" href="/3.912f846f.js" as="script">
-<link rel="preload" href="/1be78505.13d272f0.js" as="script">
-<link rel="preload" href="/144.7f4ff460.js" as="script">
-<link rel="preload" href="/935f2afb.fe9e2adc.js" as="script">
-<link rel="preload" href="/17896441.2d55b108.js" as="script">
-<link rel="preload" href="/6706e9cb.feba16d6.js" as="script">
+<link rel="preload" href="/styles.3bfb47eb.js" as="script">
+<link rel="preload" href="/runtime~main.71e9264b.js" as="script">
+<link rel="preload" href="/main.65e827d3.js" as="script">
+<link rel="preload" href="/1.ab879d60.js" as="script">
+<link rel="preload" href="/2.b9298a8d.js" as="script">
+<link rel="preload" href="/3.923eb842.js" as="script">
+<link rel="preload" href="/1be78505.9fae8b3d.js" as="script">
+<link rel="preload" href="/145.59cd0d62.js" as="script">
+<link rel="preload" href="/935f2afb.0bdb2167.js" as="script">
+<link rel="preload" href="/17896441.ada42231.js" as="script">
+<link rel="preload" href="/6706e9cb.380c17ba.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -40,16 +40,16 @@ componentDidCatch  </p><h3><a aria-hidden="true" tabindex="-1" class="anchor enh
 <img alt="image.png" src="/assets/images/flamegraph-1st-commit-055be1e98cfc7d959fdcd7bd7cd96499.png">
 <img alt="image.png" src="/assets/images/flamegraph-color-20a5f2a430d7fb94ef3f48f3d8fa6c09.png">
 <img alt="image.png" src="/assets/images/flamegraph-detail-bb2abd7bd6da56d6d670cc6e6a636477.png"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/library/react/basic"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Basic</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/library/react/conditional-rendering"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Conditional Rendering »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#reduce-bundle-size" class="table-of-contents__link">Reduce Bundle Size</a></li><li><a href="#avoid-re-rendering" class="table-of-contents__link">Avoid Re-rendering</a><ul><li><a href="#avoid-context" class="table-of-contents__link">Avoid Context</a></li><li><a href="#unique-key-for-iteration" class="table-of-contents__link">Unique Key for Iteration</a></li><li><a href="#throttling-and-debouncing-events" class="table-of-contents__link">Throttling and Debouncing Events</a></li><li><a href="#avoid-inline-function" class="table-of-contents__link">Avoid Inline Function</a></li><li><a href="#减少渲染次数" class="table-of-contents__link">减少渲染次数</a></li><li><a href="#usememo-usecallback-，避免属性改变以及昂贵计算" class="table-of-contents__link">useMemo, useCallback ，避免属性改变以及昂贵计算</a></li></ul></li><li><a href="#降低渲染的复杂度" class="table-of-contents__link">降低渲染的复杂度</a><ul><li><a href="#avoid-side-effects-in-render" class="table-of-contents__link">Avoid Side Effects in Render</a></li><li><a href="#react-fragments" class="table-of-contents__link">React Fragments</a></li><li><a href="#avoid-inline-style" class="table-of-contents__link">Avoid Inline Style</a></li><li><a href="#虚拟列表" class="table-of-contents__link">虚拟列表</a></li><li><a href="#条件语句" class="table-of-contents__link">条件语句</a></li><li><a href="#error-boundaries" class="table-of-contents__link">Error Boundaries</a></li><li><a href="#immutable-data-structures-for-components" class="table-of-contents__link">Immutable Data Structures for Components</a></li></ul></li><li><a href="#tools" class="table-of-contents__link">Tools</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/javascript/basic">JavaScript</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/javascript/typescript/basic">TypeScript</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Tools</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/tools/tools/vscode">VS Code</a></li><li class="footer__item"><a class="footer__link-item" href="/blog/2018/03/31/效率至上-一文带你真正走进vim">VIM</a></li><li class="footer__item"><a class="footer__link-item" href="/blog/2016/08/26/Linux-Mac-Shell常用命令">Shell</a></li><li class="footer__item"><a class="footer__link-item" href="/blog/2018/04/01/Chrome-Dev-Tools-性能篇">Chrome</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://twitter.com/wolfFNs" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter</a></li><li class="footer__item"><a href="https://wolffn.github.io/blog/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li><li class="footer__item"><a href="https://github.com/wolffn" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="text--center"><div>Copyright © 2021 Wolffn. Built with Docusaurus.</div></div></div></footer></div>
-<script src="/styles.1e5c332b.js"></script>
-<script src="/runtime~main.84b58f74.js"></script>
-<script src="/main.0d5412dc.js"></script>
-<script src="/1.3f0ee7a3.js"></script>
-<script src="/2.263d9b13.js"></script>
-<script src="/3.912f846f.js"></script>
-<script src="/1be78505.13d272f0.js"></script>
-<script src="/144.7f4ff460.js"></script>
-<script src="/935f2afb.fe9e2adc.js"></script>
-<script src="/17896441.2d55b108.js"></script>
-<script src="/6706e9cb.feba16d6.js"></script>
+<script src="/styles.3bfb47eb.js"></script>
+<script src="/runtime~main.71e9264b.js"></script>
+<script src="/main.65e827d3.js"></script>
+<script src="/1.ab879d60.js"></script>
+<script src="/2.b9298a8d.js"></script>
+<script src="/3.923eb842.js"></script>
+<script src="/1be78505.9fae8b3d.js"></script>
+<script src="/145.59cd0d62.js"></script>
+<script src="/935f2afb.0bdb2167.js"></script>
+<script src="/17896441.ada42231.js"></script>
+<script src="/6706e9cb.380c17ba.js"></script>
 </body>
 </html>
