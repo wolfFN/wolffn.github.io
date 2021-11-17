@@ -2,11 +2,14 @@
 title: 应用软件
 ---
 
+## 基础软件
+1. [搜狗输入法](https://pinyin.sogou.com/mac/)
+2. [Chrome](https://www.google.com/intl/zh-CN/chrome/)
+3. [Logitech Options](https://www.logitech.com.cn/zh-cn/product/options)
+
 ## 开发工具
 1. [Dash](https://kapeli.com/dash)：Mac专属文档查询工具。
-
 1. 数据库：我个人开发使用`MySQL`以及`Sequel Pro`， 安装配置以及使用指南请参考[这篇文章](http://www.jianshu.com/p/2fab19d96eb8)。
-
 1. [Charles](http://www.jianshu.com/p/8cef3406129c)：抓包/Mock工具，具体配置[点击查看](https://www.jianshu.com/p/8cef3406129c)。
 
 ## 常用软件

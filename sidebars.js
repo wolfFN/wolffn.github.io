@@ -72,13 +72,14 @@ module.exports = {
     tools: {
         Shell: [
             'tools/shell/commands',
+            'tools/shell/proxy',
+            'tools/shell/npm',
             'tools/shell/shell-script',
             'tools/shell/tmux',
             'tools/shell/git',
             'tools/shell/grep',
             'tools/shell/awk',
             'tools/shell/uniq',
-            'tools/shell/npm',
         ],
         Mac: [
             'tools/mac/system',

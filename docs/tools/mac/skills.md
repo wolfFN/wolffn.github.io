@@ -15,7 +15,7 @@ title: 技巧，快捷键
 
 ### 键盘、触摸板失灵
 
-重启后按 Cmd + R
+[重置 SMC](https://support.apple.com/zh-cn/HT201295)  
 然后使用内置键盘，触摸板。如果此时还无效，那么硬件问题。
 
 ### CheckSum

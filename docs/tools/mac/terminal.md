@@ -4,7 +4,7 @@ title: 命令行
 
 1. Homebrew, 期间会自动安装`Command Line Tools`
    ``` bash
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    brew doctor #验证安装正确
    # 以下为常用命令
    brew install [package] 		# 安装包
@@ -40,6 +40,7 @@ title: 命令行
    ```
    Config:
    1. `Preference` -> `Appearance` -> `General` -> `Theme` -> `Minimal`
+   1. `Preference` -> `Appearance` -> `Tabs` -> unselect `Stretch tabs to fill bar`
    1. `Preference` -> `Profiles` -> `Duplicate Profile` -> `set as default`
    1. `Preference` -> `Profiles` -> Choose your profile -> `Keys` -> 选中两个Esc
    ![mac-iterm-alt.png](/img/blog/Mac/mac-iterm-alt.png)
@@ -53,7 +54,7 @@ title: 命令行
    1. 下载[主题配色](https://iterm2colorschemes.com/)，推荐：Gruvbox Dark，Snazzy，Solarized Dark Higher Contrast，ayu
    1. export脚本下，使用sz,rz：`export LC_CTYPE=en_US`
 
-1. [Oh My Zsh](http://ohmyz.sh/)
+2. [Oh My Zsh](http://ohmyz.sh/)
    ``` bash
    zsh --version # 查看版本
    brew install zsh
@@ -73,7 +74,7 @@ title: 命令行
    # ZSH_THEME="avit"
    ```
 
-1. [nvm](https://github.com/creationix/nvm/blob/master/README.md): NodeJS包管理工具
+3. [nvm](https://github.com/creationix/nvm/blob/master/README.md): NodeJS包管理工具
     安装:
    ``` bash
    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
@@ -93,14 +94,14 @@ title: 命令行
    nvm uninstall 6                            # 删除 v6
    ```
 
-1. [vs code](https://code.visualstudio.com/): 文本编辑器,不喜欢IDE的推荐使用,巨硬出品,好评!
+4. [vs code](https://code.visualstudio.com/): 文本编辑器,不喜欢IDE的推荐使用,巨硬出品,好评!
    推荐插件: vscode-icon,  Code Runner
    推荐主题: `One Dark Pro`
    运行VS code并打开命令面板（ ⇧⌘P ），然后输入` shell command` 找到:
    ``` bash
     Install 'code' command in PATH
    ```
-1. [Jupyter Notebook](http://jupyter.org/) : 
+5. [Jupyter Notebook](http://jupyter.org/) : 
    Jupyter Notebook是一块所见即所得的画布，通过在浏览器上编辑代码，让开发人员实现展示与快速迭代的利器。项目最初给予python，通过安装插件，对Javascript也有良好的支持。
 
    本文仅涉及最基本安装，更多对`Javascript`的支持(es6, npm package)可以参考：[写给Javascript程序员的Jupyter Notebook使用指北](http://wolffn.github.io/2018/06/14/%E5%86%99%E7%BB%99Javascript%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84Jupyter-Notebook%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97/)
