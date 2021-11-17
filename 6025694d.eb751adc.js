@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[60],{118:function(n){n.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"qconf","name":"qconf","count":1,"permalink":"/blog/tags/qconf"}')}}]);
