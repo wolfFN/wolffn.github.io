@@ -69,6 +69,10 @@ module.exports = {
         'data-science/db/postgreSQL',
     ],
 
+    Python: [
+        'data-science/python/env',
+    ],
+
     tools: {
         Shell: [
             'tools/shell/commands',

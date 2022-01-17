@@ -58,6 +58,11 @@ module.exports = {
                             to: 'docs/data-science/db/table',
                             activeBasePath: 'docs/data-science/db',
                         },
+                        {
+                            label: 'Python',
+                            to: 'docs/data-science/python/env',
+                            activeBasePath: 'docs/data-science/python',
+                        },
                     ],
                 },
 
