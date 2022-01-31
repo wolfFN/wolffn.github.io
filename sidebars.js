@@ -71,6 +71,7 @@ module.exports = {
 
     Python: [
         'data-science/python/env',
+        'data-science/python/sql-alchemy',
     ],
 
     tools: {

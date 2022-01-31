@@ -22,3 +22,9 @@ conda deactivate
 # 查看环境列表
 conda env list
 ```
+
+## Jupyter Notebook
+``` shell
+conda install notebook
+jupyter notebook
+```
