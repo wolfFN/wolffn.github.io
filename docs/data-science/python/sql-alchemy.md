@@ -22,6 +22,8 @@ sqlalchemy.__version__
 ## 名词解释
 `DDL` 是SQL的子集，指的是其中 `schema-level` 的操作，比如，`Table` 的创建、修改或删除。由于许多数据库使用事务性的 `DDL` （在 `COMMIT` 之前不生效），所以，类似 `CREATE TABLE` 这样的 `DDL` 应放到一个以 `COMMIT` 结束的事务块中。
 
+`DML` INSERT
+
 ## 建立连接
 通过 `create_engine` 创建连接。格式如下：  
 ``` shell
@@ -74,6 +76,167 @@ with engine.connect() as conn:
 * `commit as you go`，使用 `engine.connect()` 连接，并在结尾处 `conn.commit()`。
 * `begin once`。使用 `engine.begin()`，无需显式 commit。这是比较推荐的方式。
 
+### Result
+以下几种方式均可用以遍历查询结果
+``` python
+with engine.connect() as conn:
+    result = conn.execute(text("SELECT * from some_table"))
+    print(result.all())
+
+    result = conn.execute(text("SELECT * from some_table"))
+    for x, y in result:
+        print(x,y)
+
+    result = conn.execute(text("SELECT * from some_table"))
+    for row in result:
+        print(row.x, row.y)
+
+    result = conn.execute(text("SELECT * from some_table"))
+    for row in result:
+        print(row[0], row[1])
 
 
+    result = conn.execute(text("SELECT * from some_table"))
+    for dict_row in result.mappings():
+        print(dict_row['x'], dict_row['y'])
+```
 
+### 传递参数
+为避免 `SQL` 注入攻击，在使用 `SQL` 文本时，对于 `python` 字面量，即使是非字符串，类似数字、日期，也不可直接(以格式化字符串的方式)传入 `string` 中。应当使用如下方式：
+``` python
+with engine.connect() as conn:
+    result = conn.execute(
+        text("SELECT * from some_table WHERE y > :y"),
+        {"y": 2}
+    )
+    print(result.all())
+```
+多个参数：
+``` python
+with engine.begin() as conn:
+    conn.execute(
+        text("INSERT INTO some_table (x, y) VALUES (:x, :y)"),
+        [{"x": 11, "y": 12}, {"x": 13, "y": 14}]
+    )
+
+with engine.begin() as conn:
+    conn.execute(
+        text("DELETE FROM some_table WHERE x = :x"),
+        [{"x": 11 }, {"x": 13 }]
+    )
+```
+
+此外还可以用 `bindparam` 在 `text()` 方法中绑定参数：
+``` python
+from sqlalchemy.orm import Session
+stmt = text("SELECT x, y FROM some_table WHERE y > :y ORDER BY x, y").bindparams(y=6)
+with Session(engine) as session:
+    result = session.execute(stmt)
+```
+此例中 `Session` 与 `Connection` 类似，主要在 `ORM` 中使用。
+
+## MetaData
+我们使用 `MetaData` 代指表示 `Database` 概念的 `python object`。比如，`Table`, `Column`。  
+  
+可以用于创建/删除 `Table`。不过一般应用于 `test suites`，或者小型/简单应用。对于需要长期维护的 `database schema`， 推荐使用专门的 `schema management tool`，比如 [Alembic](https://alembic.sqlalchemy.org/)。
+
+``` python
+from sqlalchemy import MetaData, Table, Column, Integer, String, ForeignKey
+metadata_obj = MetaData()
+
+user_table = Table(
+    "user_account",
+    metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('name', String(30)),
+    Column('fullname', String(50))
+)
+
+address_table = Table(
+    "address",
+    metadata_obj,
+    Column('id', Integer, primary_key=True),
+    Column('user_id', ForeignKey('user_account.id'), nullable=False),
+    Column('email_address', String(30), nullable=False)
+)
+
+# 执行创建操作
+metadata_obj.create_all(engine)
+```
+
+我们可以省略作为 `ForeignKey` 的 `Column` 的 `datatype`，将会自动从对应 `Column` 获取。  
+`Column objects` 存储于 `Table.c`，这里也可以查询 `Constraints`：
+``` python
+user_table.c.name
+# Column('name', String(length=30), table=<user_account>)
+user_table.c.keys()
+# ['id', 'name', 'fullname']
+
+user_table.primary_key
+# PrimaryKeyConstraint(Column('id', Integer(), table=<user_account>, primary_key=True, nullable=False))
+
+address_table.foreign_keys
+# {ForeignKey('user_account.id')}
+
+address_table.foreign_key_constraints
+```
+
+### ORM 模式
+在 `ORM` 模式下，`Metadata Object` 存储于 `register` 中。 所有的 `mapped class` 都应继承 `declarative base`。  
+``` python
+from sqlalchemy.orm import registry, declarative_base, relationship
+mapper_registry = registry() 
+# 获取 Base 有两种方式，推荐后者。
+# Base = mapper_registry.generate_base()
+Base = declarative_base()
+
+class User(Base):
+    __tablename__ = 'user_account'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(30))
+    fullname = Column(String(50))
+
+    addresses = relationship("Address", back_populates="user")
+
+    def __repr__(self):
+        return f"User(id={self.id!r}, name={self.name!r}, fullname={self.fullname!r})"
+
+class Address(Base):
+    __tablename__ = 'address'
+
+    id = Column(Integer, primary_key=True)
+    email_address = Column(String(30), nullable=False)
+    user_id = Column(Integer, ForeignKey('user_account.id'))
+
+    user = relationship("User", back_populates="addresses")
+
+    def __repr__(self):
+        return f"Address(id={self.id!r}, email_address={self.email_address!r})"
+
+
+# metadata 位于 mapper_registry.metadata 或 Base.metadata，推荐后者
+# mapper_registry.metadata.create_all(engine)
+Base.metadata.create_all(engine)
+```
+
+`User.__table__` 用以存储 `Table` 相关信息。  
+``` python
+User.__table__
+# Table('user_account', MetaData(), Column('id', Integer(), table=<user_account>, primary_key=True, nullable=False), Column('name', String(length=30), table=<user_account>), Column('fullname', String(), table=<user_account>), schema=None)
+```
+
+`__repr__()` 是一个可选方法，用于格式化显示 `mapped class` 的信息。
+``` python
+sandy = User(name="sandy", fullname="Sandy Cheeks")
+sandy
+# User(id=None, name='sandy', fullname='Sandy Cheeks')
+```
+
+### Table Reflection
+之前 `Metadata` 的相关内容，都是用来向 `Database` 提交 `DDL` 语句的。`Reflection` 是相反操作：用来从 `Database` 获取相关信息。
+``` python
+some_table = Table("some_table", metadata_obj, autoload_with=engine)
+some_table
+# Table('some_table', MetaData(), Column('x', INTEGER(), table=<some_table>), Column('y', INTEGER(), table=<some_table>), schema=None)
+```
