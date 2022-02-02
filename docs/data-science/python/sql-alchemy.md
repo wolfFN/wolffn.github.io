@@ -24,7 +24,7 @@ sqlalchemy.__version__
 
 `DML` INSERT
 
-## 建立连接
+## Connection
 通过 `create_engine` 创建连接。格式如下：  
 ``` shell
 [DB]+[DBAPI]://[user-name]:[password]@[database-location]/[database-name]
@@ -239,4 +239,263 @@ sandy
 some_table = Table("some_table", metadata_obj, autoload_with=engine)
 some_table
 # Table('some_table', MetaData(), Column('x', INTEGER(), table=<some_table>), Column('y', INTEGER(), table=<some_table>), schema=None)
+```
+
+## Data - Core
+
+### INSERT
+`INSERT` 语句由 `insert()` 方法构成。
+``` python
+from sqlalchemy import insert
+
+stmt = insert(user_table).values(name='spongebob', fullname="Spongebob Squarepants")
+
+print(stmt)
+# INSERT INTO user_account (name, fullname) VALUES (:name, :fullname)
+complied = stmt.compile()
+complied.params
+# {'name': 'spongebob', 'fullname': 'Spongebob Squarepants'}
+
+with engine.begin() as conn:
+    result = conn.execute(stmt)
+    print(result.inserted_primary_key)
+
+
+with engine.begin() as conn:
+    conn.execute(
+        insert(user_table),
+        [
+            {"name": "sandy", "fullname": "Sandy Cheeks"},
+            {"name": "patrick", "fullname": "Patrick Star"}
+        ]
+    )
+```
+
+
+### SELECT
+``` python
+from sqlalchemy import select
+stmt = select(user_table).where(user_table.c.name == 'spongebob')
+
+print(stmt)
+# SELECT user_account.id, user_account.name, user_account.fullname 
+# FROM user_account 
+# WHERE user_account.name = :name_1
+
+# 传入需要的列
+print(select(user_table.c.name, user_table.c.fullname))
+# SELECT user_account.name, user_account.fullname 
+# FROM user_account
+
+with engine.connect() as conn:
+    for row in conn.execute(stmt):
+        print(row)
+        # (1, 'spongebob', 'Spongebob Squarepants')
+
+# label() 创建别名
+stmt = (
+    select(
+        ("Username: " + user_table.c.name).label("username"),
+    ).order_by(user_table.c.name)
+
+# literal_column 创建文本列
+stmt = (
+    select(
+        literal_column("'some phrase'").label("p"), user_table.c.name
+    ).order_by(user_table.c.name)
+```
+
+#### WHERE
+对于简单的 `equal` 表达式，可以选择 `filter_by` 方法。
+``` python
+print(
+    select(address_table.c.email_address).
+    where(user_table.c.name == 'squidward').
+    where(address_table.c.user_id == user_table.c.id)
+)
+
+print(
+    select(address_table.c.email_address).
+    where(
+         user_table.c.name == 'squidward',
+         address_table.c.user_id == user_table.c.id
+    )
+)
+
+from sqlalchemy import and_, or_
+print(
+    select(Address.email_address).
+    where(
+        and_(
+            or_(User.name == 'squidward', User.name == 'sandy'),
+            Address.user_id == User.id
+        )
+    )
+)
+
+
+print(
+    select(User).filter_by(name='spongebob', fullname='Spongebob Squarepants')
+)
+# SELECT user_account.id, user_account.name, user_account.fullname 
+# FROM user_account 
+# WHERE user_account.name = :name_1 AND user_account.fullname = :fullname_1
+```
+
+#### JOIN
+``` python
+print(
+    select(user_table.c.name, address_table.c.email_address).
+    join_from(user_table, address_table)
+)
+
+print(
+    select(user_table.c.name, address_table.c.email_address).
+    join(address_table)
+)
+
+# SELECT user_account.name, address.email_address 
+# FROM user_account JOIN address ON user_account.id = address.user_id
+``` 
+
+### UPDATE
+``` python
+from sqlalchemy import update
+stmt = (
+    update(user_table).where(user_table.c.name == 'patrick').
+    values(fullname='Patrick the Star')
+)
+print(stmt)
+# UPDATE user_account SET fullname=:fullname WHERE user_account.name = :name_1
+
+with engine.begin() as conn:
+    result = conn.execute(stmt)
+    print(result.rowcount)
+
+
+from sqlalchemy import bindparam
+stmt = (
+  update(user_table).
+  where(user_table.c.name == bindparam('oldname')).
+  values(name=bindparam('newname'))
+)
+with engine.begin() as conn:
+  conn.execute(
+      stmt,
+      [
+         {'oldname':'jack', 'newname':'ed'},
+         {'oldname':'wendy', 'newname':'mary'},
+         {'oldname':'jim', 'newname':'jake'},
+      ]
+  )
+```
+
+### DELETE
+``` python
+from sqlalchemy import delete
+stmt = delete(user_table).where(user_table.c.name == 'patrick')
+print(stmt)
+# DELETE FROM user_account WHERE user_account.name = :name_1
+
+delete_stmt = (
+   delete(user_table).
+   where(user_table.c.id == address_table.c.user_id).
+   where(address_table.c.email_address == 'patrick@aol.com')
+ )
+from sqlalchemy.dialects import mysql
+print(delete_stmt.compile(dialect=mysql.dialect()))
+# DELETE FROM user_account USING user_account, address WHERE user_account.id = address.user_id AND address.email_address = %s
+```
+
+
+
+## Data - ORM
+### INSERT
+通过 `__init__()` 方法（optional），我们可以创建一个 `User` 实例。  
+`session.new` 查看 pending objects.
+``` python
+from sqlalchemy.orm import Session
+
+# 无需提供 primary key, auto-incrementing 会提供
+squidward = User(name="squidward", fullname="Squidward Tentacles")
+krabs = User(name="ehkrabs", fullname="Eugene H. Krabs")
+
+session = Session(engine)
+session.add(squidward)
+session.add(krabs)
+session.new
+# IdentitySet([User(id=None, name='squidward', fullname='Squidward Tentacles'), User(id=None, name='ehkrabs', fullname='Eugene H. Krabs')])
+
+# create new transaction or push changes into current transaction
+# transaction remains open 
+# optional, 因为默认 autoflush
+session.flush()
+
+# flush 之后，数据进入 persistent state，加入到 identity map 中
+squidward.id
+# 25
+
+# Session.get() 从 identity map 中获取数据，如果没有，则 SELECT
+session.get(User, 25)
+
+# commit transaction. Session.commit(), Session.rollback(), or Session.close()
+session.commit()
+
+# release all connections
+session.close()
+```
+
+
+### SELECT
+`ORM` 模式下，`row` 只有一个元素，即当前 `mapped class` 的实例(`Entity`)。
+``` python
+from sqlalchemy.orm import Session
+stmt = select(User).where(User.name == 'spongebob')
+with Session(engine) as session:
+    for row in session.execute(stmt):
+        print(row)
+        # (User(id=1, name='spongebob', fullname='Spongebob Squarepants'),)
+
+session.execute(select(User)).first()
+session.execute(select(User.name, User.fullname)).first()
+```
+
+### UPDATE
+``` python
+sandy = session.execute(select(User).filter_by(name="sandy")).scalar_one()
+sandy
+# User(id=10, name='sandy', fullname='Sandy Cheeks')
+
+sandy.fullname = "Sandy Squirrel"
+sandy in session.dirty
+# True
+
+# 任何 SELECT 都会触发 autoflush
+sandy_fullname = session.execute(
+    select(User.fullname).where(User.id == 10)
+).scalar_one()
+
+sandy in session.dirty
+# False
+
+session.commit()
+
+
+# ORM-enabled 模式，会更新 identity
+session.execute(
+    update(User).
+    where(User.name == "sandy").
+    values(fullname="Sandy Squirrel Extraordinaire")
+    # execution_options(synchronize_session="fetch")
+)
+```
+
+### DELETE
+``` python
+ehkrabs = session.get(User, 26)
+session.delete(ehkrabs)
+session.commit()
+
+# ORM-enabled 模式
+session.execute(delete(User).where(User.name == "squidward"))
 ```
