@@ -25,6 +25,9 @@ conda env list
 
 ## Jupyter Notebook
 ``` shell
+# 安装
 conda install notebook
+
+# 启动
 jupyter notebook
 ```
