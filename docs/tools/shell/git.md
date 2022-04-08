@@ -83,6 +83,7 @@ git stash apply
 git stash apply stash@{1}
 git stash pop # 应用后删除该stash
 
+git stash show -p stash@{1} # 查看指定 stash 的内容
 git stash drop stash@{1} # 删除指定
 git stash clear # 清除所有
 ```
