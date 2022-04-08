@@ -4,10 +4,17 @@ title: npm && yarn
 ### nvm 使用阿里镜像
 
 ```bash
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
 ```
 
-### npm使用[阿里源](https://npm.taobao.org/)
+### n 使用阿里镜像
+
+```bash
+export N_NODE_MIRROR=https://npmmirror.com/mirrors/node/
+```
+
+
+### npm使用[阿里源](https://npmmirror.com/)
 
 ```bash
 npm i [package-name] --registry=https://registry.npmmirror.com

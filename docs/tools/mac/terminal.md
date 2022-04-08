@@ -34,27 +34,28 @@ title: 命令行
    xcode-select --install
    ```
 
-1. iterm2
+2. iterm2
+
    ``` bash
    brew cask install iterm2
    ```
    Config:
    1. `Preference` -> `Appearance` -> `General` -> `Theme` -> `Minimal`
-   1. `Preference` -> `Appearance` -> `Tabs` -> unselect `Stretch tabs to fill bar`
-   1. `Preference` -> `Profiles` -> `Duplicate Profile` -> `set as default`
-   1. `Preference` -> `Profiles` -> Choose your profile -> `Keys` -> 选中两个Esc
+   2. `Preference` -> `Appearance` -> `Tabs` -> unselect `Stretch tabs to fill bar`
+   3. `Preference` -> `Profiles` -> `Duplicate Profile` -> `set as default`
+   4. `Preference` -> `Profiles` -> Choose your profile -> `Keys` -> 选中两个Esc
    ![mac-iterm-alt.png](/img/blog/Mac/mac-iterm-alt.png)
    1. `Preference` -> `Profiles` -> `General` -> `Working Directory` -> `Reuse Previous session's directory`
-   1. `Window` -> `Transparency / Blur`
-   1. 禁止tab之间共享history，使用`zsh`，在`~/.zshrc`输入以下内容：
+   2. `Window` -> `Transparency / Blur`
+   3. 禁止tab之间共享history，使用`zsh`，在`~/.zshrc`输入以下内容：
       ``` bash
       unsetopt inc_append_history
       unsetopt share_history
       ```
-   1. 下载[主题配色](https://iterm2colorschemes.com/)，推荐：Gruvbox Dark，Snazzy，Solarized Dark Higher Contrast，ayu
-   1. export脚本下，使用sz,rz：`export LC_CTYPE=en_US`
+   4. 下载[主题配色](https://iterm2colorschemes.com/)，推荐：Gruvbox Dark，Snazzy，Solarized Dark Higher Contrast，ayu
+   5. export脚本下，使用sz,rz：`export LC_CTYPE=en_US`
 
-2. [Oh My Zsh](http://ohmyz.sh/)
+3. [Oh My Zsh](http://ohmyz.sh/)
    ``` bash
    zsh --version # 查看版本
    brew install zsh
@@ -74,7 +75,40 @@ title: 命令行
    # ZSH_THEME="avit"
    ```
 
-3. [nvm](https://github.com/creationix/nvm/blob/master/README.md): NodeJS包管理工具
+4. [n](https://github.com/tj/n): Node.js （交互式）版本管理工具  
+   安装
+   ```bash
+   brew install n
+   ```
+
+   在 `.zshrc` 中添加路径信息。
+   ```bash
+   # n
+   export N_PREFIX=$HOME/.n
+   export PATH=$N_PREFIX/bin:$PATH
+   ```
+
+   ```bash
+   # 查看版本
+   n ls
+   n ls-remote lts
+   n ls-remote --all
+
+   # 安装 nodejs
+   n 12.22.12
+   n lts
+
+   # 进入交互界面，选择版本
+   n
+
+   # 删除指定版本
+   n rm 16.14.2
+   # 删除全部缓存版本
+   n prune
+   ```
+
+5. [nvm](https://github.com/creationix/nvm/blob/master/README.md)  
+   对比 `n` ，缺点是一定程度上拖慢 `terminal` 的速度。优点是当使用全局模块时，对不同版本 `Node.js` 的沙箱机制。
     安装:
    ``` bash
    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
@@ -94,14 +128,14 @@ title: 命令行
    nvm uninstall 6                            # 删除 v6
    ```
 
-4. [vs code](https://code.visualstudio.com/): 文本编辑器,不喜欢IDE的推荐使用,巨硬出品,好评!
+6. [vs code](https://code.visualstudio.com/): 文本编辑器,不喜欢IDE的推荐使用,巨硬出品,好评!
    推荐插件: vscode-icon,  Code Runner
    推荐主题: `One Dark Pro`
    运行VS code并打开命令面板（ ⇧⌘P ），然后输入` shell command` 找到:
    ``` bash
     Install 'code' command in PATH
    ```
-5. [Jupyter Notebook](http://jupyter.org/) : 
+7. [Jupyter Notebook](http://jupyter.org/) : 
    Jupyter Notebook是一块所见即所得的画布，通过在浏览器上编辑代码，让开发人员实现展示与快速迭代的利器。项目最初给予python，通过安装插件，对Javascript也有良好的支持。
 
    本文仅涉及最基本安装，更多对`Javascript`的支持(es6, npm package)可以参考：[写给Javascript程序员的Jupyter Notebook使用指北](http://wolffn.github.io/2018/06/14/%E5%86%99%E7%BB%99Javascript%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84Jupyter-Notebook%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97/)
