@@ -4,9 +4,9 @@ title: 实用函数
 
 ## `node.js`程序在 chrome 中调试
 
-    ```bash
-    node --inspect app.js
-    ```
+```bash
+node --inspect app.js
+```
 
 ## 创建数组
 
