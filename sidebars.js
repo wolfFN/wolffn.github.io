@@ -35,6 +35,7 @@ module.exports = {
         },
     ],
     Library: [
+        'library/nx',
         'library/node',
         'library/hapi',
         'library/sequelize',
