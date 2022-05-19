@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_demo=self.webpackChunkdocusaurus_demo||[]).push([[2618],{3745:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/shell","name":"shell","count":1,"permalink":"/blog/tags/shell"}')}}]);
