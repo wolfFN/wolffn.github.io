@@ -1,11 +1,5 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+// https://v2.docusaurus.io/
+module.exports = {
     title: "Theo's Documentation Site",
     tagline: 'Hello From Theo',
     favicon:
@@ -93,15 +87,17 @@ const config = {
                 },
             ],
         },
-        // algolia: {
-        //     apiKey: '54d389cbe47f4a8e71e5888ae0091264',
-        //     indexName: 'wolffn',
-        //     // appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
-        //     algoliaOptions: {}, // Optional, if provided by Algolia
-        // },
+        algolia: {
+            apiKey: '54d389cbe47f4a8e71e5888ae0091264',
+            indexName: 'wolffn',
+            // appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
+            algoliaOptions: {}, // Optional, if provided by Algolia
+        },
         prism: {
-            theme: lightCodeTheme,
-            darkTheme: darkCodeTheme,
+            // https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes
+            // theme: require('prism-react-renderer/themes/dracula'),
+            theme: require('prism-react-renderer/themes/github'),
+            // theme: require('prism-react-renderer/themes/palenight'),
         },
         footer: {
             style: 'dark',
@@ -186,5 +182,3 @@ const config = {
         ],
     ],
 };
-
-module.exports = config;
