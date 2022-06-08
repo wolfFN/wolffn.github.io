@@ -1,4 +1,7 @@
 // https://v2.docusaurus.io/
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 module.exports = {
     title: "Theo's Documentation Site",
     tagline: 'Hello From Theo',
@@ -88,16 +91,14 @@ module.exports = {
             ],
         },
         algolia: {
-            apiKey: '54d389cbe47f4a8e71e5888ae0091264',
+            apiKey: 'c15d10d9b75979c360e795099d49efb9',
             indexName: 'wolffn',
-            // appId: 'app-id', // Optional, if you run the DocSearch crawler on your own
+            appId: 'TETNCU4RL8', // Optional, if you run the DocSearch crawler on your own
             algoliaOptions: {}, // Optional, if provided by Algolia
         },
         prism: {
-            // https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes
-            // theme: require('prism-react-renderer/themes/dracula'),
-            theme: require('prism-react-renderer/themes/github'),
-            // theme: require('prism-react-renderer/themes/palenight'),
+            theme: lightCodeTheme,
+            darkTheme: darkCodeTheme,
         },
         footer: {
             style: 'dark',
