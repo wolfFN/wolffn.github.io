@@ -91,7 +91,7 @@ module.exports = {
             ],
         },
         algolia: {
-            apiKey: 'c15d10d9b75979c360e795099d49efb9',
+            apiKey: 'e74085e2ce425fa0838668d2c422606e',
             indexName: 'wolffn',
             appId: 'TETNCU4RL8', // Optional, if you run the DocSearch crawler on your own
             algoliaOptions: {}, // Optional, if provided by Algolia
