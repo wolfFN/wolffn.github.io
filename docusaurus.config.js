@@ -29,22 +29,22 @@ module.exports = {
                     items: [
                         {
                             label: 'General',
-                            to: 'docs/general/todo',
+                            to: 'docs/general/todo/',
                             activeBasePath: 'docs/general',
                         },
                         {
                             label: 'JavaScript',
-                            to: 'docs/javascript/basic',
+                            to: 'docs/javascript/basic/',
                             activeBasePath: 'docs/javascript',
                         },
                         {
                             label: 'CSS',
-                            to: 'docs/css/basic',
+                            to: 'docs/css/basic/',
                             activeBasePath: 'docs/css',
                         },
                         {
                             label: 'Libraries',
-                            to: 'docs/library/node',
+                            to: 'docs/library/node/',
                             activeBasePath: 'docs/library',
                         },
                     ],
