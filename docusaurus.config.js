@@ -12,6 +12,7 @@ module.exports = {
     projectName: 'wolffn.github.io',
     url: 'https://wolffn.github.io',
     baseUrl: '/',
+    trailingSlash: true,
 
     themeConfig: {
         navbar: {
@@ -179,11 +180,11 @@ module.exports = {
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
-                sitemap: {
-                    changefreq: 'weekly',
-                    priority: 0.5,
-                    trailingSlash: true,
-                },
+                // sitemap: {
+                //     changefreq: 'weekly',
+                //     priority: 0.5,
+                //     trailingSlash: true,
+                // },
             },
         ],
     ],
