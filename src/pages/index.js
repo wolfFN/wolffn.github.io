@@ -10,29 +10,17 @@ const features = [
     {
         title: <>Dev Knowledge</>,
         imageUrl: 'img/site/undraw_docusaurus_tree.svg',
-        description: (
-            <>
-                Web Development knowledge collection.
-            </>
-        ),
+        description: <>Development knowledge collection.</>,
     },
     {
         title: <>Tools</>,
         imageUrl: 'img/site/undraw_docusaurus_react.svg',
-        description: (
-            <>
-                Tools accelerate the development process.
-            </>
-        ),
+        description: <>Tools accelerate process.</>,
     },
     {
         title: <>Articles</>,
         imageUrl: 'img/site/undraw_docusaurus_mountain.svg',
-        description: (
-            <>
-                Development Process Insights Essay
-            </>
-        ),
+        description: <>Development and life insights.</>,
     },
 ];
 
@@ -73,7 +61,7 @@ function Home() {
                         <Link
                             className={classnames(
                                 'button button--outline button--secondary button--lg',
-                                styles.getStarted
+                                styles.getStarted,
                             )}
                             to={useBaseUrl('/blog')}
                         >

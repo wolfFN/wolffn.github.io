@@ -7,7 +7,6 @@ module.exports = {
     tagline: 'Hello From Theo',
     favicon:
         '//static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico',
-
     organizationName: 'wolffn',
     projectName: 'wolffn.github.io',
     url: 'https://wolffn.github.io',
