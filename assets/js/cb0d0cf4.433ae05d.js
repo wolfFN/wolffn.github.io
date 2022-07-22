@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_demo=self.webpackChunkdocusaurus_demo||[]).push([[1280],{1198:function(s){s.exports=JSON.parse('{"label":"GTD","permalink":"/blog/tags/gtd","allTagsPath":"/blog/tags","count":1}')}}]);
