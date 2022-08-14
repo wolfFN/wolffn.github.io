@@ -20,6 +20,8 @@ nx g @nrwl/nest:app [my-nest-app]
 
 ### 添加一个 ts app
 ``` shell
+npm install -D @nrwl/node
+
 nx generate @nrwl/node:app [my-ts-app]
 ```
 

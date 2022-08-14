@@ -64,6 +64,13 @@ return delay(10000).then(function () {
 test();
 ```
 
+## 随机数
+```javascript
+const getRandomInt = (min: number, max: number): number => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+```
+
 ## 防抖
 
 多次触发同一个动作、事件时，仅**最后一次**触发
