@@ -87,6 +87,13 @@ module.exports = {
                         position: 'left',
                     },
 
+                    {
+                        to: 'docs/photography/lightroom-config',
+                        activeBasePath: 'docs/photography',
+                        label: 'Photography',
+                        position: 'left',
+                    },
+
                     { to: 'blog', label: 'Articles', position: 'left' },
                     {
                         href: 'https://github.com/wolffn',
