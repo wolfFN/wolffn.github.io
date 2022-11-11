@@ -1,4 +1,8 @@
-#  数据库设计
+---
+title: 数据库设计
+tags: [database]
+---
+
 > 译自：https://www.datanamic.com/support/lt-dez005-introduction-db-modeling.html
 
 本文将讲述关系型数据库设计的基础，并解释如何进行良好的数据库设计。文章很长，但我们建议你读完它。数据库设计是相当容易的，但有一些规则需要坚守。知其然更要知其所以然，否则，很容易犯错。

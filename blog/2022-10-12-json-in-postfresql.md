@@ -1,4 +1,7 @@
-# JSON in PostgreSQL
+---
+title: JSON in PostgreSQL
+tags: [database, postgreSQL]
+---
 
 PostgreSQL 有许多存储、处理 JSON 数据的功能。本文将讲述：
 * JSON 是什么，为什么值得使用。

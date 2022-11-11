@@ -1,6 +1,6 @@
 ---
 title: Create React App 中的 Webpack 优化
-tags: [webpack]
+tags: [react, webpack]
 ---
 
 Create React App 创建的工程，一段时间后，打包速度越来越慢。我对速度和打包体积做了初步的优化，本文记录大概过程。
