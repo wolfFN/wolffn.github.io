@@ -130,11 +130,15 @@ module.exports = {
                         ],
                     },
                     {
-                        title: 'Tools',
+                        title: 'Articles',
                         items: [
                             {
-                                label: 'VS Code',
-                                to: 'docs/tools/tools/vscode',
+                                label: 'Tags',
+                                to: 'blog/tags/',
+                            },
+                            {
+                                label: 'Books',
+                                to: 'docs/books/health/这本书能让你睡得好/',
                             },
                             {
                                 label: 'VIM',

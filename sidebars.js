@@ -124,4 +124,20 @@ module.exports = {
             'algorithm/application/leetcode-hot-300',
         ],
     },
+    books: {
+        育儿: [
+            'books/parenting/正面管教',
+            'books/parenting/跟早教专家学儿童潜能开发',
+            'books/parenting/爱上阅读的秘密',
+            'books/parenting/妈妈教的数学',
+        ],
+        健康: [
+            'books/health/这本书能让你睡得好'
+        ],
+        历史: [
+            'books/history/失败者的春秋',
+            'books/history/中央帝国的哲学密码',
+
+        ]
+    }
 };
