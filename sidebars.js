@@ -138,6 +138,22 @@ module.exports = {
             'books/history/失败者的春秋',
             'books/history/中央帝国的哲学密码',
 
+        ],
+        心理学: [
+            'books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾',
+        ],
+        社会学: [
+            'books/sociology/鬼谷子',
+            'books/sociology/工作、消费主义和新穷人',
+        ],
+        工作方法论:[
+            'books/methodology/金字塔原理',
+            'books/methodology/非暴力沟通',
+            'books/methodology/麦肯锡结构化战略思维',
+        ],
+        效率:[
+            'books/productivity/怦然心动的工作整理魔法',
+            'books/productivity/搞定Ⅰ',
         ]
     }
 };
