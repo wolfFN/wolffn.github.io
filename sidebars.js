@@ -130,6 +130,7 @@ module.exports = {
             'books/parenting/跟早教专家学儿童潜能开发',
             'books/parenting/爱上阅读的秘密',
             'books/parenting/妈妈教的数学',
+            'books/parenting/蒙台梭利家庭方案',
         ],
         健康: [
             'books/health/这本书能让你睡得好'
@@ -137,6 +138,7 @@ module.exports = {
         历史: [
             'books/history/失败者的春秋',
             'books/history/中央帝国的哲学密码',
+            'books/history/朝鲜战争',
 
         ],
         心理学: [
