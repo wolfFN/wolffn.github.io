@@ -81,7 +81,7 @@ module.exports = {
                         position: 'left',
                     },
                     {
-                        to: 'docs/tools/shell/shell-script',
+                        to: 'docs/tools/shell/proxy',
                         activeBasePath: 'docs/tools',
                         label: 'Tools',
                         position: 'left',

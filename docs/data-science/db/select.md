@@ -192,3 +192,12 @@ SELECT USER();
 SELECT CHARSET([字符]);
 ```
 
+
+### 统计 count
+
+```sql
+SELECT driver_id, COUNT(driver_id) AS TRIP_COUNT
+FROM trips
+WHERE driver_id IN ('1', '2', '3')
+GROUP BY driver_id;
+```

@@ -26,8 +26,19 @@ unset http_proxy https_proxy all_proxy
 ## Git
 Clash
 ``` shell
-git config --global http.proxy http://127.0.0.1:7890 
-git config --global https.proxy https://127.0.0.1:7890
+git config --global http.proxy socks5://127.0.0.1:7890
+git config --global https.proxy socks5://127.0.0.1:7890
+```
+
+配置 ssh 使用代理, `vi ~/.gitconfig`  
+```
+Host github.com
+ProxyCommand connect -H 127.0.0.1:7890 %h %p
+HostName %h
+Port 22
+User git
+IdentityFile  ~/.ssh/id_rsa 
+IdentitiesOnly yes
 ```
 
 Shadowsocks
