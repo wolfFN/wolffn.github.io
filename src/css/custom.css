@@ -47,3 +47,7 @@ html {
         src: url('/fonts/jinkai.ttf');
     }
 }
+
+article code {
+    vertical-align: unset;
+}
