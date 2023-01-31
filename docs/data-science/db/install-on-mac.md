@@ -73,23 +73,32 @@ title: Install On Mac
    CREATE DATABASE [new-database-name]; 
    ```
 
-2. 新建用户。
+2. 新建用户。  
+   过程中，如果提示密码不符合标准，可以更新对应设置。
    ```sql
-   // 给localhost创建用户nodejs，并将密码设置为nodejs
+   # 给localhost创建用户nodejs，并将密码设置为nodejs
    CREATE USER 'nodejs'@'%' identified by 'nodejs';
-   // 将用户权限信息从数据表同步到内存（此命令可以避免重启mysql服务）
+   # 将用户权限信息从数据表同步到内存（此命令可以避免重启mysql服务）
    FLUSH PRIVILEGES;
+
+   # 查看密码设置
+   SHOW VARIABLES LIKE 'validate_password%';
+   # 更新设置
+   SET GLOBAL validate_password.length = 6;
+
    ```
 
 3. 授予权限。
-   接下来我们为当前应用创建一个名为nodejs的数据库，并将其权限全部赋予user nodejs.
+   接下来我们为当前应用创建一个名为nodejs的数据库，并将其权限全部赋予 user nodejs.  
    ```sql
    CREATE DATABASE nodejs; 
    GRANT ALL PRIVILEGES ON nodejs.* TO 'nodejs'@'%' IDENTIFIED BY 'nodejs';
 
-   // 8.0
+   # 8.0
    GRANT ALL PRIVILEGES ON nodejs.* TO 'nodejs'@'%';
    ```
+   
+
 
 4. 查找本地`my.conf`位置
    ``` bash

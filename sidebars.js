@@ -87,6 +87,7 @@ module.exports = {
             'tools/shell/grep',
             'tools/shell/awk',
             'tools/shell/uniq',
+            'tools/shell/ffmpeg',
         ],
         Mac: [
             'tools/mac/system',
