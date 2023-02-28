@@ -133,30 +133,29 @@ module.exports = {
             'books/parenting/妈妈教的数学',
             'books/parenting/蒙台梭利家庭方案',
         ],
-        健康: [
-            'books/health/这本书能让你睡得好'
-        ],
+        健康: ['books/health/这本书能让你睡得好'],
         历史: [
             'books/history/失败者的春秋',
             'books/history/中央帝国的哲学密码',
             'books/history/朝鲜战争',
-
+            'books/history/翦商',
         ],
-        心理学: [
-            'books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾',
-        ],
+        心理学: ['books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾'],
         社会学: [
             'books/sociology/鬼谷子',
             'books/sociology/工作、消费主义和新穷人',
         ],
-        工作方法论:[
+        哲学: ['books/philosophy/禅语摩托车维修艺术'],
+        地理:['books/geography/这里是中国2'],
+        工作方法论: [
             'books/methodology/金字塔原理',
             'books/methodology/非暴力沟通',
             'books/methodology/麦肯锡结构化战略思维',
+            'books/methodology/俞军产品方法论',
         ],
-        效率:[
+        效率: [
             'books/productivity/怦然心动的工作整理魔法',
             'books/productivity/搞定Ⅰ',
-        ]
-    }
+        ],
+    },
 };
