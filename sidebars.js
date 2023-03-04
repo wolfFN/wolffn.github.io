@@ -96,7 +96,7 @@ module.exports = {
             'tools/mac/skills',
             'tools/mac/alfred',
         ],
-        Ubuntu: ['tools/ubuntu/ubuntu'],
+        Ubuntu: ['tools/ubuntu/ubuntu', 'tools/ubuntu/wsl'],
         Tools: [
             'tools/tools/vscode',
             'tools/tools/webstorm',
@@ -146,7 +146,7 @@ module.exports = {
             'books/sociology/工作、消费主义和新穷人',
         ],
         哲学: ['books/philosophy/禅语摩托车维修艺术'],
-        地理:['books/geography/这里是中国2'],
+        地理: ['books/geography/这里是中国2'],
         工作方法论: [
             'books/methodology/金字塔原理',
             'books/methodology/非暴力沟通',
