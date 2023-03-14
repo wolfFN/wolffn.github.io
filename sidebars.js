@@ -47,6 +47,7 @@ module.exports = {
                 'library/react/diff',
                 'library/react/life-circle',
                 'library/react/patterns',
+                'library/react/fiber',
                 'library/react/react-router',
                 'library/react/redux-observable',
             ],
