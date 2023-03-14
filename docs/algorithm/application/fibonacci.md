@@ -22,10 +22,35 @@ const fibonacci = function(n) {
 
 
 ## 尾递归
+```javascript
+/**
+ * @param {number} n
+ * @return {number}
+ */
+const fib = function (n, result1 = 0, result2 = 1) {
+    if (n === 0) {
+        return result1;
+    }
+    return fib(n - 1, result2, result1 + result2);
+};
+```
 
 
 ## 迭代
+```javascript
+const fib = function (n) {
+    if (n === 0 || n === 1) {
+        return n;
+    }
+    let prev = 0,
+        cur = 1;
 
+    for (let i = 1; i < n; i++) {
+        [cur, prev] = [cur + prev, cur];
+    }
+    return cur;
+};
+```
 
 
 
