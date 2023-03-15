@@ -43,6 +43,11 @@ module.exports = {
                                 activeBasePath: 'docs/javascript',
                             },
                             {
+                                label: 'Typescript',
+                                to: 'docs/typescript/basic/',
+                                activeBasePath: 'docs/typescript',
+                            },
+                            {
                                 label: 'CSS',
                                 to: 'docs/css/basic/',
                                 activeBasePath: 'docs/css',

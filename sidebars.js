@@ -17,7 +17,6 @@ module.exports = {
         'javascript/regex',
         'javascript/module',
         {
-            TypeScript: ['javascript/typescript/basic'],
             snippets: [
                 'javascript/snippets/conditional',
                 'javascript/snippets/functions',
@@ -25,6 +24,8 @@ module.exports = {
             ],
         },
     ],
+    TypeScript: ['typescript/basic', 'typescript/covariant'],
+
     CSS: [
         'css/basic',
         'css/blank',
