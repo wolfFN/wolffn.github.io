@@ -17,6 +17,20 @@ brew install ffmpeg
 ffmpeg -i input.avi output.mp4
 ```
 
+## 查看视频编码
+``` shell
+# 视频编码
+ffprobe -v error -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 input.mp4
+
+# 音频编码
+ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of default=nokey=1:noprint_wrappers=1 input.mp4
+
+# 全部信息
+ffprobe -hide_banner -stats -i input.mp4
+```
+
+
+
 ## 将视频转化为 h265 编码
 `h265` 编码能够大大减小文件体积。
 ``` shell
