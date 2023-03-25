@@ -14,7 +14,7 @@ module.exports = {
     projectName: 'wolffn.github.io',
     url: 'https://wolffn.github.io',
     baseUrl: '/',
-    trailingSlash: true,
+    // trailingSlash: true,
 
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

@@ -41,11 +41,11 @@
     padding: 0 var(--ifm-pre-padding);
 }
 
-html {
-    @font-face {
-        font-family: TsangerJinKai03-6763;
-        src: url('/fonts/jinkai.ttf');
-    }
+/* html {} */
+
+@font-face {
+    font-family: TsangerJinKai03-6763;
+    src: url('/fonts/jinkai.ttf');
 }
 
 article code {
