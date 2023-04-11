@@ -136,6 +136,16 @@ module.exports = {
             'books/parenting/蒙台梭利家庭方案',
         ],
         健康: ['books/health/这本书能让你睡得好'],
+        工作方法论: [
+            'books/methodology/金字塔原理',
+            'books/methodology/非暴力沟通',
+            'books/methodology/麦肯锡结构化战略思维',
+            'books/methodology/俞军产品方法论',
+        ],
+        效率: [
+            'books/productivity/怦然心动的工作整理魔法',
+            'books/productivity/搞定Ⅰ',
+        ],
         历史: [
             'books/history/失败者的春秋',
             'books/history/中央帝国的哲学密码',
@@ -148,16 +158,10 @@ module.exports = {
             'books/sociology/工作、消费主义和新穷人',
         ],
         哲学: ['books/philosophy/禅语摩托车维修艺术'],
-        地理: ['books/geography/这里是中国2'],
-        工作方法论: [
-            'books/methodology/金字塔原理',
-            'books/methodology/非暴力沟通',
-            'books/methodology/麦肯锡结构化战略思维',
-            'books/methodology/俞军产品方法论',
+        地理: [
+            'books/geography/这里是中国2',
+            'books/geography/宇宙奥德赛：穿越银河系',
         ],
-        效率: [
-            'books/productivity/怦然心动的工作整理魔法',
-            'books/productivity/搞定Ⅰ',
-        ],
+        诗歌: ['books/poem/星期六晚我们去散步吧'],
     },
 };
