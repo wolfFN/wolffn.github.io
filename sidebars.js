@@ -145,6 +145,7 @@ module.exports = {
         效率: [
             'books/productivity/怦然心动的工作整理魔法',
             'books/productivity/搞定Ⅰ',
+            'books/productivity/最重要的事只有一件',
         ],
         历史: [
             'books/history/失败者的春秋',
@@ -163,5 +164,6 @@ module.exports = {
             'books/geography/宇宙奥德赛：穿越银河系',
         ],
         诗歌: ['books/poem/星期六晚我们去散步吧'],
+        小说: ['books/novel/苗疆蛊事', 'books/novel/源泉'],
     },
 };
