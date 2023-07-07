@@ -2,6 +2,12 @@
 title: 系统设置
 ---
 
+## 重装系统
+[Ref: 官网](https://support.apple.com/zh-cn/guide/mac-help/mchlp1599/13.0/mac/13.0)
+* 安装与你电脑兼容的 macOS 最新版本：Option-Command-R。
+* 重新安装你电脑原始版本的 macOS（包括可用的更新）：Option-Shift-Command-R。
+* 重新安装当前版本的 macOS：Command-R。
+
 
 ## OS X 系统设置
 1. 触摸板
@@ -32,7 +38,7 @@ title: 系统设置
 1. 取消自动更新: 
    1. `Software Update` -> 取消勾选 `Automatically keep my Mac up to date`, `Advanced` -> 取消勾选 `Check for updates`.
    2. `App Store`  -> `Preference` -> 取消勾选 `Automatically Updates`
-1. 固定桌面顺序：`Mission Control` -> 取消勾选 `Automatically rearrange Spaces based on most recent use`
+1. 固定桌面顺序：`DeskTop & Dock` 最底部 -> `Mission Control` -> 取消勾选 `Automatically rearrange Spaces based on most recent use`
 1. `Dictionary -> Preferences`,  添加 `牛津英汉汉英词典` `现代汉语规范词典`.
 1. 菜单上显示音量控制图标:`System Preference` -> `Sound` -> `Show volume in menu bar`
 1. 菜单上显示蓝牙图标: `System Preference` -> `BlueTooth` -> `Show BlueTooth in menu bar`
