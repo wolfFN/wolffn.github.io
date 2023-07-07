@@ -152,6 +152,7 @@ module.exports = {
             'books/history/中央帝国的哲学密码',
             'books/history/朝鲜战争',
             'books/history/翦商',
+            'books/history/芯片战争',
         ],
         心理学: ['books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾'],
         社会学: [
