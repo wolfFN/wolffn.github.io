@@ -141,6 +141,7 @@ module.exports = {
             'books/methodology/非暴力沟通',
             'books/methodology/麦肯锡结构化战略思维',
             'books/methodology/俞军产品方法论',
+            'books/methodology/练习的心态',
         ],
         效率: [
             'books/productivity/怦然心动的工作整理魔法',
@@ -153,6 +154,7 @@ module.exports = {
             'books/history/朝鲜战争',
             'books/history/翦商',
             'books/history/芯片战争',
+            'books/history/芯片战争-余盛',
         ],
         心理学: ['books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾'],
         社会学: [
