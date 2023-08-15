@@ -142,6 +142,7 @@ module.exports = {
             'books/methodology/麦肯锡结构化战略思维',
             'books/methodology/俞军产品方法论',
             'books/methodology/练习的心态',
+            'books/methodology/卡片笔记写作法',
         ],
         效率: [
             'books/productivity/怦然心动的工作整理魔法',
