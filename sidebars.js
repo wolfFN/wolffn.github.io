@@ -103,6 +103,7 @@ module.exports = {
             'tools/tools/vscode',
             'tools/tools/webstorm',
             'tools/tools/chrome',
+            'tools/tools/Mermaid',
         ],
 
         软技能: [
