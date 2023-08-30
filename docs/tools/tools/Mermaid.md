@@ -109,7 +109,7 @@ sequenceDiagram
 ```
 
 ### 创建和销毁 (v10.3.0+)
-```mermaid 
+``` mermaid-unsupported 
 sequenceDiagram
     Alice->>Bob: Hello Bob, how are you ?
     Bob->>Alice: Fine, thank you. And you?

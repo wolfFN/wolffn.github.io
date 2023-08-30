@@ -16,6 +16,11 @@ module.exports = {
     baseUrl: '/',
     // trailingSlash: true,
 
+    markdown: {
+        mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
+
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
