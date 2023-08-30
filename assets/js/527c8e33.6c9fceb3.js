@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_demo=self.webpackChunkdocusaurus_demo||[]).push([[6795],{70245:function(a){a.exports=JSON.parse('{"label":"database","permalink":"/blog/tags/database","allTagsPath":"/blog/tags","count":2}')}}]);
