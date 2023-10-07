@@ -158,17 +158,18 @@ module.exports = {
             'books/history/芯片战争',
             'books/history/芯片战争-余盛',
         ],
-        心理学: ['books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾'],
+        心理学: ['books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾', 'books/psychology/心流：最优体验心理学'],
         社会学: [
             'books/sociology/鬼谷子',
             'books/sociology/工作、消费主义和新穷人',
+            'books/sociology/贫穷的本质',
         ],
         哲学: ['books/philosophy/禅语摩托车维修艺术'],
         地理: [
             'books/geography/这里是中国2',
             'books/geography/宇宙奥德赛：穿越银河系',
         ],
-        诗歌: ['books/poem/星期六晚我们去散步吧'],
+        诗歌: ['books/poem/星期六晚我们去散步吧', 'books/poem/晴耕雨读,得闲饮茶'],
         小说: ['books/novel/苗疆蛊事', 'books/novel/源泉'],
     },
 };

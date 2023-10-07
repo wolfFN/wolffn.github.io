@@ -9,6 +9,7 @@
     "deploy": "GIT_USER=wolffn DEPLOYMENT_BRANCH=gh-pages USE_SSH=true docusaurus deploy"
   },
   "dependencies": {
+    "@babel/helper-get-function-arity": "^7.16.7",
     "@docusaurus/core": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",
     "@docusaurus/theme-mermaid": "^2.4.1",
