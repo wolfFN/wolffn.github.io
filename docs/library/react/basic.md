@@ -5,6 +5,10 @@ title: Basic
 ### Hooks
 [https://reactjs.org/docs/hooks-intro.html](https://reactjs.org/docs/hooks-intro.html)<br />[https://scotch.io/tutorials/getting-started-with-react-hooks#toc-what-is-this-usestate-syntax-](https://scotch.io/tutorials/getting-started-with-react-hooks#toc-what-is-this-usestate-syntax-)
 
+## 实用工具
+- [React Dev Inspector](https://github.com/zthxxx/react-dev-inspector): 组件定位工具. 项目引入后, 在浏览器通过快捷键 `Ctrl + Cmd + Shift + C` 跳转到 编辑器 对应组件文件.  
+- [React Inspector](https://chrome.google.com/webstore/detail/react-inspector/gkkcgbepkkhfnnjolcaggogkjodmlpkh): 定位组件的浏览器插件.  
+
 ## 项目工程思想
 
 - 项目规模维度
