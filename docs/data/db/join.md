@@ -149,7 +149,7 @@ WHERE a.age >= b.age
 GROUP BY b.empid;
 ```
 > 会遇到报错，与 ONLY_FULL_GROUP_BY 规则冲突。此时可以 
-> * 去除 ONLY_FULL_GROUP_BY 模式，[参考](/docs/data-science/db/install-on-mac#only_full_group_by)
+> * 去除 ONLY_FULL_GROUP_BY 模式，[参考](/docs/data/db/install-on-mac#only_full_group_by)
 > * 给列名加 ANY_VALUE 函数。`ANY_VALUE(a.empid), ANY_VALUE(a.age)`
 
 ## 子查询

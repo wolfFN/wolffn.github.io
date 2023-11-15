@@ -59,23 +59,23 @@ module.exports = {
     Database: [
         {
             MySQL: [
-                'data-science/db/install-on-mac',
-                'data-science/db/dump',
-                'data-science/db/table',
-                'data-science/db/data-type',
-                'data-science/db/select',
-                'data-science/db/update',
-                'data-science/db/delete',
-                'data-science/db/join',
+                'data/db/install-on-mac',
+                'data/db/dump',
+                'data/db/table',
+                'data/db/data-type',
+                'data/db/select',
+                'data/db/update',
+                'data/db/delete',
+                'data/db/join',
             ],
         },
-        'data-science/db/postgreSQL',
+        'data/db/postgreSQL',
     ],
 
     Python: [
-        'data-science/python/env',
-        'data-science/python/sql-alchemy',
-        'data-science/python/sql-alchemy-relationship',
+        'data/python/env',
+        'data/python/sql-alchemy',
+        'data/python/sql-alchemy-relationship',
     ],
 
     tools: {

@@ -66,20 +66,20 @@ module.exports = {
                     },
 
                     {
-                        to: 'docs/data-science/db/table',
-                        activeBasePath: 'docs/data-science',
-                        label: 'Data Science',
+                        to: 'docs/data/db/table',
+                        activeBasePath: 'docs/data',
+                        label: 'Data',
                         position: 'left',
                         items: [
                             {
                                 label: 'Database',
-                                to: 'docs/data-science/db/table',
-                                activeBasePath: 'docs/data-science/db',
+                                to: 'docs/data/db/table',
+                                activeBasePath: 'docs/data/db',
                             },
                             {
                                 label: 'Python',
-                                to: 'docs/data-science/python/env',
-                                activeBasePath: 'docs/data-science/python',
+                                to: 'docs/data/python/env',
+                                activeBasePath: 'docs/data/python',
                             },
                         ],
                     },
