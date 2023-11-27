@@ -136,7 +136,11 @@ module.exports = {
             'books/parenting/妈妈教的数学',
             'books/parenting/蒙台梭利家庭方案',
         ],
-        健康: ['books/health/这本书能让你睡得好'],
+        健康: [
+            'books/health/这本书能让你睡得好',
+            'books/health/这样喝茶最健康',
+            'books/health/我能让你瘦',
+        ],
         工作方法论: [
             'books/methodology/金字塔原理',
             'books/methodology/非暴力沟通',
@@ -144,6 +148,11 @@ module.exports = {
             'books/methodology/俞军产品方法论',
             'books/methodology/练习的心态',
             'books/methodology/卡片笔记写作法',
+            'books/methodology/软技能，代码之外的生存指南',
+            'books/methodology/暗时间',
+            'books/methodology/How-to-Be-A-Programmer-CN',
+            'books/methodology/把时间当作朋友',
+            'books/methodology/超级精力管理术',
         ],
         效率: [
             'books/productivity/怦然心动的工作整理魔法',
@@ -158,18 +167,40 @@ module.exports = {
             'books/history/芯片战争',
             'books/history/芯片战争-余盛',
         ],
-        心理学: ['books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾', 'books/psychology/心流：最优体验心理学'],
+        人物传记: ['books/biography/苏东坡传'],
+        心理学: [
+            'books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾',
+            'books/psychology/心流：最优体验心理学',
+            'books/psychology/选择的悖论',
+            'books/psychology/拖延心理学',
+            'books/psychology/思考，快与慢',
+        ],
         社会学: [
             'books/sociology/鬼谷子',
             'books/sociology/工作、消费主义和新穷人',
             'books/sociology/贫穷的本质',
+            'books/sociology/见识：商业的本质和人生的智慧',
         ],
-        哲学: ['books/philosophy/禅语摩托车维修艺术'],
+        哲学: [
+            'books/philosophy/禅语摩托车维修艺术',
+            'books/philosophy/少有人走的路',
+            'books/philosophy/人生的智慧',
+        ],
+        杂文: [
+            'books/essay/佛祖在一号线',
+            'books/essay/忏悔录',
+            'books/essay/白说',
+            'books/essay/晚来寂静',
+            'books/essay/罗辑思维：成大事者不纠结',
+        ],
         地理: [
             'books/geography/这里是中国2',
             'books/geography/宇宙奥德赛：穿越银河系',
         ],
-        诗歌: ['books/poem/星期六晚我们去散步吧', 'books/poem/晴耕雨读,得闲饮茶'],
+        诗歌: [
+            'books/poem/星期六晚我们去散步吧',
+            'books/poem/晴耕雨读,得闲饮茶',
+        ],
         小说: ['books/novel/苗疆蛊事', 'books/novel/源泉'],
     },
 };
