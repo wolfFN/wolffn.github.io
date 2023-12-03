@@ -2,6 +2,14 @@
 title: TRICKS
 ---
 
+## 检测是否支持某个样式属性
+```js
+const root = document.documentElement;
+if ('text-shadow' in root.style) {
+    // add style
+}
+```
+
 ## 文字折线
 
 ```css

@@ -1,6 +1,7 @@
 module.exports = {
     General: [
         'general/todo',
+        'general/dom',
         'general/network',
         'general/https',
         'general/cache',

@@ -53,7 +53,7 @@ title: 命令行
       unsetopt share_history
       ```
    4. 下载[主题配色](https://iterm2colorschemes.com/)，推荐：Gruvbox Dark，Snazzy，Solarized Dark Higher Contrast，ayu
-   5. export脚本下，使用sz,rz：`export LC_CTYPE=en_US`
+   5. 支持 sz, rz: [iTerm2-zmodem](https://github.com/robberphex/iTerm2-zmodem)
 
 3. [Oh My Zsh](http://ohmyz.sh/)
    ``` bash
