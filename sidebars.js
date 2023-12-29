@@ -169,8 +169,8 @@ module.exports = {
             'books/history/中央帝国的哲学密码',
             'books/history/朝鲜战争',
             'books/history/翦商',
-            'books/history/芯片战争',
-            'books/history/芯片战争-余盛',
+            'books/history/秦并天下',
+            'books/history/楚汉双雄',
         ],
         人物传记: ['books/biography/苏东坡传'],
         心理学: [
@@ -185,6 +185,11 @@ module.exports = {
             'books/sociology/工作、消费主义和新穷人',
             'books/sociology/贫穷的本质',
             'books/sociology/见识：商业的本质和人生的智慧',
+        ],
+        科学技术: [
+            'books/science/芯片战争',
+            'books/science/芯片战争-余盛',
+            'books/science/全球科技通史',
         ],
         哲学: [
             'books/philosophy/禅语摩托车维修艺术',
