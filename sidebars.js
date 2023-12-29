@@ -99,7 +99,11 @@ module.exports = {
             'tools/mac/skills',
             'tools/mac/alfred',
         ],
-        Ubuntu: ['tools/ubuntu/ubuntu', 'tools/ubuntu/wsl'],
+        Ubuntu: [
+            'tools/ubuntu/ubuntu',
+            'tools/ubuntu/wsl',
+            'tools/ubuntu/operation',
+        ],
         Tools: [
             'tools/tools/vscode',
             'tools/tools/webstorm',

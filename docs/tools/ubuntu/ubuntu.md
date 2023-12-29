@@ -40,6 +40,14 @@ ls -l /bin/sh
 sudo dpkg-reconfigure dash
 ```
 
+### 免密登录
+```shell
+touch ~/.ssh/authorized_keys
+
+# 本地机器, 输出粘贴至 authorized_keys
+cat ~/.ssh/id_rsa.pub
+```
+
 ## zsh
 
 ```bash
@@ -61,11 +69,10 @@ sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
 
 ## nvm
 
-我主要想折腾 nodejs、graphQL 相关内容，所以最重要的环境就是 nodejs。这里通过 nvm 的方式进行安装。
-
+我主要想折腾 nodejs、graphQL 相关内容，所以最重要的环境就是 nodejs。这里通过 nvm 的方式进行安装。  
+[最新命令地址](https://github.com/nvm-sh/nvm#installing-and-updating)
 ```bash
-sudo wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
-nvm install 10
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
 ```
 
 ## Nginx
@@ -88,9 +95,11 @@ sudo make install
 
 # 运行：
 # Tengine 配置与 nginx 基本一致，可执行程序位于 /usr/local/nginx/sbin 目录下。
-/usr/local/nginx/sbin/nginx -s start
-/usr/local/nginx/sbin/nginx -s reload
-/usr/local/nginx/sbin/nginx -s stop
+sudo /usr/local/nginx/sbin/nginx -s reload
+sudo /usr/local/nginx/sbin/nginx -s stop
+
+# 校验配置文件
+sudo /usr/local/nginx/sbin/nginx -t
 ```
 
 ## MySQL

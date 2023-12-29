@@ -109,9 +109,10 @@ title: 命令行
 
 5. [nvm](https://github.com/creationix/nvm/blob/master/README.md)  
    对比 `n` ，缺点是一定程度上拖慢 `terminal` 的速度。优点是当使用全局模块时，对不同版本 `Node.js` 的沙箱机制。
-    安装:
+    安装:  
+    [最新命令地址](https://github.com/nvm-sh/nvm#installing-and-updating)
    ``` bash
-   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
    # 将以下内容添加到 ~/.zshrc
    export NVM_DIR="$HOME/.nvm"
    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
