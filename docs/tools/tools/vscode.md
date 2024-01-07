@@ -3,30 +3,37 @@ title: VS Code
 ---
 
 ## Debug with Chrome
+
 打断点一般两种形式:
+
 1. 代码中加入 `debugger`. 缺点是需要重新 build,可能会浪费时间. 此外增加了对代码的额外修改.
-1. devtools Source 面板中定位代码, 添加断点. 缺点是定位麻烦.  
+1. devtools Source 面板中定位代码, 添加断点. 缺点是定位麻烦.
 
 比上述两种方式更方便的形式是直接在 vs code 中打断点, 步骤如下:
+
 1. vs code 中添加 debug 配置
-  ```json
-  {
+
+```json
+{
     "version": "0.2.0",
     "configurations": [
-      {
-        "type": "chrome",
-        "request": "attach",
-        "name": "Attach to browser",
-        "port": 9222,
-        "webRoot": "${workspaceFolder}"
-      }
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to browser",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        }
     ]
-  }
-  ```
+}
+```
+
 1. 使用如下命令启动 Chrome:
-  ```shell
-  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
-  ```
+
+```shell
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+```
+
 1. vs code, run and debug 界面, 点击 Start Debugging, 或 F5.
 
 ## 美化设置
@@ -36,6 +43,14 @@ Theme: `Cobalt2 Theme Official`，对眼睛最好
 字体：`Fira Code`，配合 `editor.fontLigatures`
 
 `cursor`一系列相关选项，设置光标效果
+
+## 格式化设置
+prettier 使用 .editorconfig 作为配置, 在 package.json 加入:
+```json
+"prettier": {
+  "editorconfig": true
+},
+```
 
 ## 全局命令
 

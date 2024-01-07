@@ -15,7 +15,7 @@
     --ifm-color-primary-lighter: rgb(102, 212, 189);
     --ifm-color-primary-lightest: rgb(146, 224, 208);
 
-    --ifm-font-family-base: TsangerJinKai03-6763, system-ui, -apple-system,
+    --ifm-font-family-base: Inconsolata, TsangerJinKai03-6763, system-ui, -apple-system,
         Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
         BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -42,10 +42,14 @@
 }
 
 /* html {} */
-
 @font-face {
     font-family: TsangerJinKai03-6763;
     src: url('/fonts/jinkai.ttf');
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url('/fonts/Inconsolata.ttf');
 }
 
 article code {
