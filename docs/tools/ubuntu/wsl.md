@@ -25,8 +25,54 @@ detach vdisk
 
 
 ## wsl proxy
+当前最佳实践是，wsl2 采用网络镜像模式，复用宿主机网络。  
+WSL 全局设置位于 `C:\Users\<UserName>\.wslconfig`, [参考](https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config#wslconfig)。具体步骤如下：
+1. 编辑或新建 .wslconfig, 添加如下内容
+  ```
+  [experimental]
+  autoMemoryReclaim=gradual  
+  networkingMode=mirrored
+  dnsTunneling=true
+  firewall=true
+  autoProxy=true
+  ```
+1. 命令行(管理员模式)关闭 wsl: 
+  ```shell
+  wsl --shutdown
+  ```
+1. 打开 wsl，测试代理是否 ok。
+  ```shell
+  curl -vv www.google.com
+  ```
+
+### Github
+1. 对于 github，可编辑/新建如下文件 `~/.ssh/config`，配置如下：
+  ```
+  Host github.com
+  ProxyCommand connect -H 127.0.0.1:7890 %h %p
+  HostName %h
+  Port 22
+  User git
+  IdentityFile  ~/.ssh/id_rsa 
+  IdentitiesOnly yes
+  ```
+1. 如果没有 connect 命令，先安装：
+  ```shell
+  sudo apt-get install connect-proxy
+  ```
+1. 校验。
+  ```shell
+  ssh -T git@github.com
+  ```
+
+
+
+### Archive
+> 早期方法，现已废弃  
+
 在 wsl 环境中，配置使用宿主机(windows)代理，首先，要在windows防火墙中创建入站、进站规则，将宿主机代理软件端口(clash:7890)开放。  
 之后，在 ubuntu 中，可以通过如下命令获取 ip
+
 ```shell
 cat /etc/resolv.conf
 
