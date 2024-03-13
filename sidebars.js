@@ -171,6 +171,8 @@ module.exports = {
       'books/history/翦商',
       'books/history/秦并天下',
       'books/history/楚汉双雄',
+      'books/history/弃长安',
+      'books/history/大汉帝国在巴蜀',
     ],
     人物传记: ['books/biography/苏东坡传'],
     心理学: [
@@ -180,13 +182,13 @@ module.exports = {
       'books/psychology/拖延心理学',
       'books/psychology/思考，快与慢',
       'books/psychology/内疚清理练习',
-
     ],
     社会学: [
       'books/sociology/鬼谷子',
       'books/sociology/工作、消费主义和新穷人',
       'books/sociology/贫穷的本质',
       'books/sociology/见识：商业的本质和人生的智慧',
+      'books/sociology/毫无意义的工作',
     ],
     科学技术: [
       'books/science/芯片战争',
@@ -209,7 +211,11 @@ module.exports = {
       'books/geography/这里是中国2',
       'books/geography/宇宙奥德赛：穿越银河系',
     ],
-    诗歌: ['books/poem/星期六晚我们去散步吧', 'books/poem/晴耕雨读,得闲饮茶'],
+    诗歌: [
+      'books/poem/星期六晚我们去散步吧',
+      'books/poem/晴耕雨读,得闲饮茶',
+      'books/poem/观看王维的十九种方式',
+    ],
     小说: [
       'books/novel/苗疆蛊事',
       'books/novel/源泉',
