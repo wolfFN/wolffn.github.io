@@ -17,7 +17,7 @@ use [database-name];
 CREATE DATABASE [new-database-name]; 
 
 # 删除 db
-DELETE DATABASE [database-name];
+DROP DATABASE [database-name];
 ```
 
 ## Table

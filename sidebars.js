@@ -140,6 +140,8 @@ module.exports = {
       'books/parenting/爱上阅读的秘密',
       'books/parenting/妈妈教的数学',
       'books/parenting/蒙台梭利家庭方案',
+      'books/parenting/怎么说',
+      'books/parenting/如何说',
     ],
     健康: [
       'books/health/这本书能让你睡得好',
@@ -173,6 +175,7 @@ module.exports = {
       'books/history/楚汉双雄',
       'books/history/弃长安',
       'books/history/大汉帝国在巴蜀',
+      'books/history/太后西奔',
     ],
     人物传记: ['books/biography/苏东坡传'],
     心理学: [
