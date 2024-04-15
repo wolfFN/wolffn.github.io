@@ -224,6 +224,8 @@ module.exports = {
       'books/novel/源泉',
       'books/novel/一句顶一万句',
       'books/novel/兰亭序杀局',
+      'books/novel/极品家丁',
+      'books/novel/少年歌行',
     ],
   },
 };
