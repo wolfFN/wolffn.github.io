@@ -25,7 +25,7 @@ module.exports = {
       ],
     },
   ],
-  TypeScript: ['typescript/basic', 'typescript/covariant'],
+  TypeScript: ['typescript/basic', 'typescript/covariant', 'typescript/type-operation'],
 
   CSS: [
     'css/basic',
