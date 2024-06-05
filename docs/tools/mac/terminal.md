@@ -163,3 +163,13 @@ title: 命令行
    # 退出后再一次执行命令，就可以看到对js的支持了。
    jupyter notebook
    ```
+
+8. [mactop](https://github.com/context-labs/mactop)
+   命令行性能监控工具，用以监控 m 系列芯片性能占用。
+   ```shell
+   # 安装
+   brew install mactop
+
+   # 使用
+   sudo mactop
+   ```

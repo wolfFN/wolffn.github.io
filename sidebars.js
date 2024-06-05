@@ -50,6 +50,7 @@ module.exports = {
         'library/react/life-circle',
         'library/react/patterns',
         'library/react/fiber',
+        'library/react/useImperativeHandle',
         'library/react/react-router',
         'library/react/redux-observable',
       ],
