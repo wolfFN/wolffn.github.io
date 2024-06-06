@@ -75,7 +75,7 @@ sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
 ```
 
-## Nginx
+## Tengine
 
 如果访问 github 速度慢，可以去[官网](http://tengine.taobao.org/download_cn.html)下载
 
@@ -101,6 +101,25 @@ sudo /usr/local/nginx/sbin/nginx -s stop
 # 校验配置文件
 sudo /usr/local/nginx/sbin/nginx -t
 ```
+
+## Nginx
+安装 Tengine 时，在 ubuntu 主机遇到 libssl.so.1.1 无法安装的问题 (2024.06.06)。先用 nginx 来代替。
+```shell
+apt-get install nginx
+
+systemctl start nginx
+systemctl status nginx
+
+# 主配置
+/etc/nginx/nginx.conf
+# 站点配置
+/etc/nginx/sites-enabled
+
+nginx -t 
+nginx -s reload
+```
+
+
 
 ## MySQL
 
