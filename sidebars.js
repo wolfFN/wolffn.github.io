@@ -148,6 +148,7 @@ module.exports = {
       'books/health/这本书能让你睡得好',
       'books/health/这样喝茶最健康',
       'books/health/我能让你瘦',
+      'books/health/控糖革命',
     ],
     工作方法论: [
       'books/methodology/金字塔原理',
@@ -177,6 +178,7 @@ module.exports = {
       'books/history/弃长安',
       'books/history/大汉帝国在巴蜀',
       'books/history/太后西奔',
+      'books/history/危机与重构',
     ],
     人物传记: ['books/biography/苏东坡传'],
     心理学: [
@@ -221,10 +223,11 @@ module.exports = {
       'books/poem/观看王维的十九种方式',
     ],
     小说: [
-      'books/novel/苗疆蛊事',
+      'books/novel/追问',
       'books/novel/源泉',
       'books/novel/一句顶一万句',
       'books/novel/兰亭序杀局',
+      'books/novel/苗疆蛊事',
       'books/novel/极品家丁',
       'books/novel/少年歌行',
     ],
