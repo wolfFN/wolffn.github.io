@@ -2,11 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolffn.github.io/blog</id>
     <title>Theo's Documentation Site Blog</title>
-    <updated>2023-11-24T00:00:00.000Z</updated>
+    <updated>2024-08-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolffn.github.io/blog"/>
     <subtitle>Theo's Documentation Site Blog</subtitle>
     <icon>https://wolffn.github.io/static.yximgs.com/udata/pkg/userGrowth-fe-infra/user-profile-bear-logo.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[how to think in writing]]></title>
+        <id>https://wolffn.github.io/blog/2024/08/09/think-in-writing</id>
+        <link href="https://wolffn.github.io/blog/2024/08/09/think-in-writing"/>
+        <updated>2024-08-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to think in writing 读后感]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://www.henrikkarlsson.xyz/p/writing-to-think" target="_blank" rel="noopener noreferrer">How to think in writing</a> 读后感</p><p>写作可以帮助我们精炼、改善我们的想法。</p><p>思考、对话中的想法，是流动的，可以改变，所以不严谨。<br>
+<!-- -->写作过程中的想法，依然是流动的。但是写完的一瞬间，将会固定下来。<br>
+<!-- -->写作帮助我们固定我们的想法，共容易发现其中纰漏。</p><p>将想法展开、解释，有机会发现更多漏洞。<br>
+<!-- -->证明想法错误，只是一个收获。更重要的是带来新的想法。</p>]]></content>
+        <category label="writing" term="writing"/>
+        <category label="think" term="think"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[yt-dlp 下载视频]]></title>
         <id>https://wolffn.github.io/blog/2023/11/24/yt-dlp</id>
