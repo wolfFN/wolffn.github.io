@@ -45,6 +45,7 @@ module.exports = {
       React: [
         'library/react/basic',
         'library/react/react-performance',
+        'library/react/render',
         'library/react/conditional-rendering',
         'library/react/diff',
         'library/react/life-circle',
