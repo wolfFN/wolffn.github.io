@@ -52,7 +52,10 @@ ffmpeg -i input.mp4 -vcodec copy -acodec copy -tag:v hvc1 output.mp4
 ```shell
 ffmpeg -ss 66 -t 30 -i input.mp4 -c:v libx265 -tag:v hvc1 output.mp4
 ```
-
+剪掉视频的前 30s, 剩余部分编码保持不变。
+```shell
+ffmpeg -ss 30 -i hmn-586-c.mp4 -vcodec copy -acodec copy output.mp4
+```
 ## 解压缩视频
 在对视频进行处理时，有时候会遇到音频丢帧的的情况。我个人猜测是由于帧间压缩引起的。下面的命令将视频、音频编码皆转化为 raw 格式，还原帧间压缩，能够预防下一步处理时出错。  
 其中，`-y` 表示对后续弹出提示一律默认 `yes`。比如是否覆盖现有文件。
