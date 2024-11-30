@@ -7,9 +7,13 @@ Chrome Dev Tools 是每一位前端工程师开发调试的必备利器，称之
 
 <!--truncate-->
 
+## 截图
+在 devtools 中，`Cmd + Shift + P` 打开命令面板，输入 `Capture`， 选择对应命令进行截屏操作。
+
 ## Elements
 - 进入：
 	1. `Cmd + Alt + c` inspect，点击想观察的节点
+  1. 如果有些元素不容易选中，按住 `shift` 键，进入穿透模式
 	1.  console中`inspect(DOM)`，`DOM`为想观察的节点。
 - 遍历节点：
 	1. 鼠标点击
