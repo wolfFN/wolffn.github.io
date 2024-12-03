@@ -12,12 +12,14 @@ title: 应用软件
 1. [Dash](https://kapeli.com/dash)：Mac专属文档查询工具。
 1. 数据库：我个人开发使用`MySQL`以及`Sequel Pro`， 安装配置以及使用指南请参考[这篇文章](http://www.jianshu.com/p/2fab19d96eb8)。
 1. [Charles](http://www.jianshu.com/p/8cef3406129c)：抓包/Mock工具，具体配置[点击查看](https://www.jianshu.com/p/8cef3406129c)。
+1. [OrbStack](https://orbstack.dev/): Docker 桌面客户端。
 
 ## 常用软件
 1. [Obsidian](https://obsidian.md/)：笔记软件。
 1. [Paste](https://pasteapp.io/)：剪切板增强工具。
 1. [Rectangle](https://rectangleapp.com/)：窗口管理， 多/大显示器尤其实用。
 1. [Hidden Bar](https://apps.apple.com/cn/app/hidden-bar/id1452453066?mt=12)：隐藏状态栏图标。
+   1. [Ice](https://github.com/jordanbaird/Ice), 刘海屏选择，展开菜单放在状态栏下方，避免被刘海屏遮住。
 1. [Raycast](https://www.raycast.com/): 快捷启动工具。
 1. [欧路词典](https://www.eudic.net/v4/en/app/eudic)。
 1. [The Unarchiver](https://apps.apple.com/cn/app/the-unarchiver/id425424353?l=en&mt=12)：解压缩
