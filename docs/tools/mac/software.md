@@ -8,6 +8,16 @@ title: 应用软件
 1. [Edge](https://www.microsoft.com/zh-cn/edge?form=MA13FJ)
 1. [Chrome](https://www.google.com/intl/zh-CN/chrome/)
 
+## 效率工具
+1. [Paste](https://pasteapp.io/)：剪切板增强工具。
+1. [Rectangle](https://rectangleapp.com/)：窗口管理， 多/大显示器尤其实用。
+1. [Hidden Bar](https://apps.apple.com/cn/app/hidden-bar/id1452453066?mt=12)：隐藏状态栏图标。
+   * [Ice](https://github.com/jordanbaird/Ice), 刘海屏选择，展开菜单放在状态栏下方，避免被刘海屏遮住。
+1. [Raycast](https://www.raycast.com/): 快捷启动工具。
+1. [Snipaste](https://zh.snipaste.com/)：截图工具。
+   * [CleanShot](https://cleanshot.com/): 功能更强大，可以买断付费。
+
+
 ## 开发工具
 1. [Dash](https://kapeli.com/dash)：Mac专属文档查询工具。
 1. 数据库：我个人开发使用`MySQL`以及`Sequel Pro`， 安装配置以及使用指南请参考[这篇文章](http://www.jianshu.com/p/2fab19d96eb8)。
@@ -17,22 +27,18 @@ title: 应用软件
 
 ## 常用软件
 1. [Obsidian](https://obsidian.md/)：笔记软件。
-1. [Paste](https://pasteapp.io/)：剪切板增强工具。
-1. [Rectangle](https://rectangleapp.com/)：窗口管理， 多/大显示器尤其实用。
-1. [Hidden Bar](https://apps.apple.com/cn/app/hidden-bar/id1452453066?mt=12)：隐藏状态栏图标。
-   * [Ice](https://github.com/jordanbaird/Ice), 刘海屏选择，展开菜单放在状态栏下方，避免被刘海屏遮住。
-1. [Raycast](https://www.raycast.com/): 快捷启动工具。
 1. [欧路词典](https://www.eudic.net/v4/en/app/eudic)。
 1. [The Unarchiver](https://apps.apple.com/cn/app/the-unarchiver/id425424353?l=en&mt=12)：解压缩
 1. [LocalSend](https://localsend.org/zh-CN): 局域网文件传输工具。
+1. [TinkerTool](https://www.bresink.com/osx/TinkerTool.html)：进阶系统配置工具。最有用的一个配置是 Dock 快速显示、隐藏。
+1. [MonitorControl](https://github.com/MonitorControl/MonitorControl): 键盘控制显示器亮度、音量。
 
 ## 其他
-1. [IINA](https://iina.io/)：多媒体播放，mpv内核，开源软件，快速迭代中，强推。
-1. [PDF Expert](https://pdfexpert.com/zh)。
+1. [IINA](https://iina.io/)：多媒体播放，mpv内核，开源软件，快速迭代中，强推。\
 1. [ImageOptim](https://imageoptim.com/mac)，图片压缩，有点是操作简单方便，缺点是直接在文件上修改。
-1. [Snipaste](https://zh.snipaste.com/)：截图工具。
-  * [CleanShot](https://cleanshot.com/): 功能更强大，可以买断付费。
 1. [Spark](https://sparkmailapp.com/zh)：邮件客户端。
+1. [PDF Expert](https://pdfexpert.com/zh)。
+1. [Jane Reader](https://janereader.com/)：极致的 epub 阅读体验，支持各种自定义。
 1. [ClearView](https://itunes.apple.com/us/app/clearview/id557090104?mt=12)：阅读工具，略贵，但完美支持mobi，epub，pdf。
 1. [NTFS For Mac](https://www.ntfsformac.cn/)：读写 NTFS 文件格式的存储设备。
 1. [Noizio](http://www.noiz.io/)：白噪音软件，可以组合多种常见白噪音，强推。
