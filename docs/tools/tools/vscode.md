@@ -12,28 +12,24 @@ title: VS Code
 比上述两种方式更方便的形式是直接在 vs code 中打断点, 步骤如下:
 
 1. vs code 中添加 debug 配置
-
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "chrome",
-            "request": "attach",
-            "name": "Attach to browser",
-            "port": 9222,
-            "webRoot": "${workspaceFolder}"
-        }
-    ]
-}
-```
-
+  ```json
+  {
+      "version": "0.2.0",
+      "configurations": [
+          {
+              "type": "chrome",
+              "request": "attach",
+              "name": "Attach to browser",
+              "port": 9222,
+              "webRoot": "${workspaceFolder}"
+          }
+      ]
+  }
+  ```
 1. 使用如下命令启动 Chrome:
-
-```shell
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
-```
-
+  ```shell
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+  ```
 1. vs code, run and debug 界面, 点击 Start Debugging, 或 F5.
 
 ## 美化设置
@@ -74,11 +70,13 @@ prettier 使用 .editorconfig 作为配置, 在 package.json 加入:
 
 ## 导航
 
+`F8`                 next error/warning in file  
 `cmd + 悬停`                 show defination  
 `F12` `cmd ＋ 左键`       Go To Defination  
 `Alt + F12`                 Peek Defination  
 `shift + F12`             Go To Reference  
-`cmd + u` , `ctrl + 0`  返回鼠标上一个位置  
+`ctrl + -`,或鼠标后退键,     返回鼠标上一个位置  
+`ctrl + shift + -`, 或鼠标前进键    前进到鼠标下一个位置  
 `cmd + alt + 左键`      在另一个侧栏打开  
 `cmd + shift + o`     Symbol 导航  
 `cmd + t`                      多文件中定位 Symbol  
@@ -92,6 +90,7 @@ prettier 使用 .editorconfig 作为配置, 在 package.json 加入:
 
 ## 选择
 
+`ctrl + shift + →` 扩大选区  
 `cmd + shift +[ ]` 折叠／展开代码  
 `cmd + K, cmd + 0` 折叠全部  
 `cmd + K, cmd + J` 展开全部  
