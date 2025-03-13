@@ -25,7 +25,11 @@ module.exports = {
       ],
     },
   ],
-  TypeScript: ['typescript/basic', 'typescript/covariant', 'typescript/type-operation'],
+  TypeScript: [
+    'typescript/basic',
+    'typescript/covariant',
+    'typescript/type-operation',
+  ],
 
   CSS: [
     'css/basic',
@@ -150,6 +154,7 @@ module.exports = {
       'books/health/这样喝茶最健康',
       'books/health/我能让你瘦',
       'books/health/控糖革命',
+      'books/health/八部金刚功 八部长寿功',
     ],
     工作方法论: [
       'books/methodology/金字塔原理',
@@ -178,10 +183,12 @@ module.exports = {
       'books/history/楚汉双雄',
       'books/history/弃长安',
       'books/history/大汉帝国在巴蜀',
+      'books/history/重返：三国现场',
       'books/history/太后西奔',
       'books/history/危机与重构',
+      'books/history/心路沧桑',
     ],
-    人物传记: ['books/biography/苏东坡传'],
+    人物传记: ['books/biography/苏东坡传', 'books/biography/夜航西飞'],
     心理学: [
       'books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾',
       'books/psychology/心流：最优体验心理学',
@@ -189,6 +196,7 @@ module.exports = {
       'books/psychology/拖延心理学',
       'books/psychology/思考，快与慢',
       'books/psychology/内疚清理练习',
+      'books/psychology/你的敏感，就是你的天赋',
     ],
     社会学: [
       'books/sociology/鬼谷子',
@@ -201,6 +209,7 @@ module.exports = {
       'books/science/芯片战争',
       'books/science/芯片战争-余盛',
       'books/science/全球科技通史',
+      'books/science/这就是ChatGpt',
     ],
     哲学: [
       'books/philosophy/禅语摩托车维修艺术',
@@ -231,6 +240,9 @@ module.exports = {
       'books/novel/苗疆蛊事',
       'books/novel/极品家丁',
       'books/novel/少年歌行',
+      'books/novel/正道潜龙',
+      'books/novel/我师兄实在太稳健了',
+      'books/novel/娱乐春秋',
     ],
   },
 };
