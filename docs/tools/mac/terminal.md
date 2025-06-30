@@ -56,7 +56,7 @@ title: 命令行
       unsetopt inc_append_history
       unsetopt share_history
       ```
-   8. 下载[主题配色](https://iterm2colorschemes.com/)，推荐：Gruvbox Dark，Snazzy，Solarized Dark Higher Contrast，ayu
+   8. 下载[主题配色](https://iterm2colorschemes.com/)，推荐：Argonaut, Gruvbox Dark, Snazzy, Solarized Dark Higher Contrast, ayu
    9. 支持 sz, rz: [iTerm2-zmodem](https://github.com/robberphex/iTerm2-zmodem)
 
 1. [Oh My Zsh](http://ohmyz.sh/)
