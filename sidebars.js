@@ -189,7 +189,7 @@ module.exports = {
       'books/history/太后西奔',
       'books/history/危机与重构',
       'books/history/心路沧桑',
-      'books/history/共天下',
+      'books/history/君臣共天下',
       'books/history/世说俗谈',
     ],
     人物传记: [
