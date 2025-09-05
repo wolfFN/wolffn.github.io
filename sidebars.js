@@ -191,12 +191,14 @@ module.exports = {
       'books/history/心路沧桑',
       'books/history/君臣共天下',
       'books/history/世说俗谈',
+      'books/history/庆历四年春',
     ],
     人物传记: [
       'books/biography/苏东坡传',
       'books/biography/夜航西飞',
       'books/biography/人类群星闪耀时',
       'books/biography/昨日的世界',
+      'books/biography/名士自风流',
     ],
     心理学: [
       'books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾',
@@ -225,6 +227,7 @@ module.exports = {
       'books/philosophy/少有人走的路',
       'books/philosophy/人生的智慧',
       'books/philosophy/被讨厌的勇气',
+      'books/philosophy/道德经',
     ],
     杂文: [
       'books/essay/佛祖在一号线',
@@ -257,6 +260,7 @@ module.exports = {
       'books/novel/群星',
       'books/novel/枭起青壤',
       'books/novel/杯雪',
+      'books/novel/长安的荔枝',
     ],
   },
 };
