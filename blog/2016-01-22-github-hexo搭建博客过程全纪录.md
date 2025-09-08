@@ -23,7 +23,7 @@ brew install git
 - 安装node
 - 安装npm
 - 注册github
-登录官网 <http://github.com/>注册，并在邮箱中**确认注册**。
+登录官网 [`http://github.com/`](http://github.com/)注册，并在邮箱中**确认注册**。
 - 建立github仓库 username.github.io
 项目名称必须为username.github.io，username与注册时的用户名**完全相同**，在该项目的setting中，找到GitHub Pages一项，根据提示开启“automatic page generator”
 

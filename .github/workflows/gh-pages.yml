@@ -11,38 +11,48 @@ jobs:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: '16.x'
+          version: 10.15.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
       - name: Test Build
         run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build
+          pnpm build
   gh-release:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: '16.x'
-      - name: Build
+          version: 10.15.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Test Build
         run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build
+          pnpm build
       - name: Release to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

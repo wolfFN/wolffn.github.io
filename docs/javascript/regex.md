@@ -46,5 +46,5 @@ exec
 + 至少1<br />
 ^ 开始<br />
 $ 结尾<br />
-n{x,y}  x到y个n
+n\{x,y\}  x到y个n
 

@@ -72,9 +72,9 @@ const search = (nums, target) => {
 
 ## 查找右侧边界
 
-查找最后一个 <= target 的数。
+查找最后一个 &lt;= target 的数。
 
--   若 nums[mid] <= target，low 取 mid 后一个元素
+-   若 nums[mid] &lt;= target，low 取 mid 后一个元素
 -   若 nums[mid] > target，high 取 mid 前一个元素
 -   最后对 high 进行检查后，返回
 
