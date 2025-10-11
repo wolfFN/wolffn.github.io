@@ -6,6 +6,7 @@
     "dev": "docusaurus start",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "clear": "docusaurus clear",
     "swizzle": "docusaurus swizzle",
     "deploy": "GIT_USER=wolffn DEPLOYMENT_BRANCH=gh-pages USE_SSH=true docusaurus deploy"
   },

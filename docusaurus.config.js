@@ -129,6 +129,7 @@ module.exports = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['bash'],
       },
       footer: {
         style: 'dark',
