@@ -236,6 +236,7 @@ module.exports = {
       'books/essay/晚来寂静',
       'books/essay/罗辑思维：成大事者不纠结',
       'books/essay/热风',
+      'books/essay/理想,还需要吗'
     ],
     地理: [
       'books/geography/这里是中国2',
@@ -261,6 +262,7 @@ module.exports = {
       'books/novel/枭起青壤',
       'books/novel/杯雪',
       'books/novel/长安的荔枝',
+      'books/novel/额尔古纳河右岸',
     ],
   },
 };
