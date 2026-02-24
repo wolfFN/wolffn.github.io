@@ -157,6 +157,9 @@ module.exports = {
       'books/health/控糖革命',
       'books/health/八部金刚功 八部长寿功',
       'books/health/一心只做一事',
+      'books/health/干眼自救',
+      'books/health/野泳去',
+      'books/health/茶经',
     ],
     工作方法论: [
       'books/methodology/金字塔原理',
@@ -192,6 +195,10 @@ module.exports = {
       'books/history/君臣共天下',
       'books/history/世说俗谈',
       'books/history/庆历四年春',
+      'books/history/决战：华东解放战争1945～1949',
+      'books/history/决战：东北解放战争1945～1948',
+      'books/history/决战：华北解放战争1945～1949',
+      'books/history/决战：中原西南解放战争1945～1951',
     ],
     人物传记: [
       'books/biography/苏东坡传',
@@ -199,6 +206,7 @@ module.exports = {
       'books/biography/人类群星闪耀时',
       'books/biography/昨日的世界',
       'books/biography/名士自风流',
+      'books/biography/和苏东坡吃茶',
     ],
     心理学: [
       'books/psychology/欲罢不能：刷屏时代如何摆脱行为上瘾',
@@ -236,7 +244,7 @@ module.exports = {
       'books/essay/晚来寂静',
       'books/essay/罗辑思维：成大事者不纠结',
       'books/essay/热风',
-      'books/essay/理想,还需要吗'
+      'books/essay/理想,还需要吗',
     ],
     地理: [
       'books/geography/这里是中国2',
@@ -263,6 +271,11 @@ module.exports = {
       'books/novel/杯雪',
       'books/novel/长安的荔枝',
       'books/novel/额尔古纳河右岸',
+      'books/novel/女侠且慢',
+      'books/novel/道诡异仙',
+      'books/novel/燕歌江湖传',
+      'books/novel/生死疲劳',
+      'books/novel/山海经密码',
     ],
   },
 };
