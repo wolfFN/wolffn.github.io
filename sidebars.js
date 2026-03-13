@@ -173,6 +173,9 @@ module.exports = {
       'books/methodology/How-to-Be-A-Programmer-CN',
       'books/methodology/把时间当作朋友',
       'books/methodology/超级精力管理术',
+      'books/methodology/如何成为不完美主义者',
+      'books/methodology/完美主义扼杀效率',
+      'books/methodology/小而美：持续盈利的经营法则',
     ],
     效率: [
       'books/productivity/怦然心动的工作整理魔法',
@@ -245,6 +248,7 @@ module.exports = {
       'books/essay/罗辑思维：成大事者不纠结',
       'books/essay/热风',
       'books/essay/理想,还需要吗',
+      'books/essay/谁是最可爱的人',
     ],
     地理: [
       'books/geography/这里是中国2',
@@ -276,6 +280,7 @@ module.exports = {
       'books/novel/燕歌江湖传',
       'books/novel/生死疲劳',
       'books/novel/山海经密码',
+      'books/novel/破晓之钟',
     ],
   },
 };
