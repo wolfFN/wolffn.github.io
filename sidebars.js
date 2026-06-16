@@ -189,6 +189,7 @@ module.exports = {
       'books/history/翦商',
       'books/history/秦并天下',
       'books/history/楚汉双雄',
+      'books/history/楚国兴亡史',
       'books/history/弃长安',
       'books/history/大汉帝国在巴蜀',
       'books/history/重返：三国现场',
@@ -202,6 +203,8 @@ module.exports = {
       'books/history/决战：东北解放战争1945～1948',
       'books/history/决战：华北解放战争1945～1949',
       'books/history/决战：中原西南解放战争1945～1951',
+      'books/history/决战：西北解放战争1945～1949',
+      'books/history/决战：中南解放战争1949～1950',
     ],
     人物传记: [
       'books/biography/苏东坡传',
@@ -281,6 +284,9 @@ module.exports = {
       'books/novel/生死疲劳',
       'books/novel/山海经密码',
       'books/novel/破晓之钟',
+      'books/novel/龙枪编年史Ⅰ：秋暮之巨龙',
+      'books/novel/龙枪编年史Ⅱ：冬夜之巨龙',
+      'books/novel/龙枪编年史Ⅲ：春晓之巨龙',
     ],
   },
 };
