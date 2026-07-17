@@ -31,6 +31,12 @@ module.exports = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         title: 'Theo',
         logo: {
@@ -109,6 +115,27 @@ module.exports = {
             activeBasePath: 'docs/photography',
             label: 'Photography',
             position: 'left',
+          },
+
+          {
+            label: 'Books',
+            position: 'left',
+            items: [
+              { type: 'docSidebar', sidebarId: 'booksParenting', label: '育儿' },
+              { type: 'docSidebar', sidebarId: 'booksHealth', label: '健康' },
+              { type: 'docSidebar', sidebarId: 'booksMethodology', label: '工作方法论' },
+              { type: 'docSidebar', sidebarId: 'booksProductivity', label: '效率' },
+              { type: 'docSidebar', sidebarId: 'booksHistory', label: '历史' },
+              { type: 'docSidebar', sidebarId: 'booksBiography', label: '人物传记' },
+              { type: 'docSidebar', sidebarId: 'booksPsychology', label: '心理学' },
+              { type: 'docSidebar', sidebarId: 'booksSociology', label: '社会学' },
+              { type: 'docSidebar', sidebarId: 'booksScience', label: '科学技术' },
+              { type: 'docSidebar', sidebarId: 'booksPhilosophy', label: '哲学' },
+              { type: 'docSidebar', sidebarId: 'booksEssay', label: '杂文' },
+              { type: 'docSidebar', sidebarId: 'booksGeography', label: '地理' },
+              { type: 'docSidebar', sidebarId: 'booksPoem', label: '诗歌' },
+              { type: 'docSidebar', sidebarId: 'booksNovel', label: '小说' },
+            ],
           },
 
           { to: 'blog', label: 'Articles', position: 'left' },
