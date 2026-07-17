@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Docusaurus 2 documentation website containing technical articles, blog posts, and documentation on various topics including web development, databases, algorithms, tools, and books. The site is organized into several main sections:
+This is a Docusaurus 3 documentation website containing technical articles, blog posts, and documentation on various topics including web development, databases, algorithms, tools, and books. The site is organized into several main sections:
 
 1. **Blog**: Personal articles and tutorials
 2. **Docs**: Technical documentation organized by topic (JavaScript, TypeScript, CSS, Libraries, Database, Python, Tools, Algorithms)
@@ -12,30 +12,32 @@ This is a Docusaurus 2 documentation website containing technical articles, blog
 
 ## Development Commands
 
+This project uses **pnpm** as its package manager (see `pnpm-lock.yaml`).
+
 ### Installation
 ```bash
-yarn
+pnpm install
 ```
 
 ### Local Development
 ```bash
-yarn start
+pnpm dev
 # or
-yarn dev
+pnpm start
 ```
 Starts a local development server with live reload.
 
 ### Build
 ```bash
-yarn build
+pnpm build
 ```
 Generates static content into the `build` directory.
 
 ### Deployment
 ```bash
-yarn deploy
+pnpm deploy
 ```
-Builds the website and deploys to GitHub Pages.
+Builds the website and deploys to GitHub Pages (`gh-pages` branch via the `deploy` script).
 
 ## Codebase Architecture
 
@@ -57,6 +59,8 @@ Documentation is organized in `sidebars.js` with the following main categories:
 - **Tools**: Development tools, shell commands, IDEs
 - **Algorithm**: Data structures and algorithms
 
+Note: The **Database** and **Python** sidebar categories are backed by files under `docs/data/db` and `docs/data/python`. There is also a `docs/photography` directory (e.g. Lightroom config notes).
+
 ### Content Format
 - Blog posts follow the naming convention `YYYY-MM-DD-title.md`
 - Documentation files are in Markdown format
@@ -64,8 +68,8 @@ Documentation is organized in `sidebars.js` with the following main categories:
 - Mermaid diagrams are enabled for visual documentation
 
 ## Key Dependencies
-- Docusaurus 2 for static site generation
-- React 16 for UI components
-- Prism for syntax highlighting
-- Mermaid for diagrams
+- Docusaurus 3 for static site generation
+- React 18 for UI components
+- Prism (prism-react-renderer) for syntax highlighting
+- Mermaid (@docusaurus/theme-mermaid) for diagrams
 - Algolia for search functionality
